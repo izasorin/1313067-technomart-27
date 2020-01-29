@@ -11,7 +11,10 @@
   			<a href="index.html">
           <img src="img/logo.svg" width="220" height="47" alt="Логотип магазина Техномарт">
         </a>
-  			<!-- Здесь будет форма поиска -->
+        <form>
+          <label for="search"></label>
+          <input type="search" id="search" placeholder="Поиск:">
+        </form>
   			<a href="#">Закладки: 0</a>
   			<a href="#">Корзина: 10</a>
   			<a href="#">Оформить заказ</a>
@@ -50,23 +53,43 @@
         <li>Перфораторы</li>
       </ul>
       <h1>Перфораторы</h1>
-      <section>
-        <h2>Фильтр</h2>
+      <form>
+        <span>Фильтр:</span>
+        <section>
+          <h3>Цена:</h3>
+            <div>
+              <input type="text" name="price"><!-- Хотел решить с помощью type="range", но понял что это не совсем тот инструмент и решил дождаться лекции по доступности -->
+            </div>
+            <div>
+              <input type="text" name="price" value="0">
+              <span>–</span>
+              <input type="text" name="price" value="30000">
+            </div>
+        </section>
+        <hr class="line">
+        <section>
           <h3>Производители:</h3>
-          <ul>
-            <li><a href="#">BOSCH</a></li>
-            <li><a href="#">ИНТЕРСКОЛ</a></li>
-            <li><a href="#">MAKIta</a></li>
-            <li><a href="#">Dewalt</a></li>
-            <li><a href="#">Hitachi</a></li>
-          </ul>
-        <h3>Питание:</h3>
-          <ul>
-            <li><a href="#">Аккумуляторные</a></li>
-            <li><a href="#">Сетевые</a></li>
-          </ul>
-        <button type="button">Показать</button>
-      </section>
+          <input type="checkbox" name="bosh" id="bosh" checked>
+          <label for="bosh">BOSCH</label>
+          <input type="checkbox" name="interskol" id="interskol">
+          <label for="interskol">ИНТЕРСКОЛ</label>
+          <input type="checkbox" name="makita" id="makita" checked>
+          <label for="makita">MAKIta</label>
+          <input type="checkbox" name="dewalt" id="dewalt">
+          <label for="dewalt">Dewalt</label>
+          <input type="checkbox" name="hitachi" id="hitachi">
+          <label for="hitachi">Hitachi</label>
+        </section>
+        <hr class="line">
+        <section>
+          <h3>Питание:</h3>
+          <input type="radio" name="accumulator" id="accumulator" checked>
+          <label for="accumulator">Аккумуляторные</label>
+          <input type="radio" name="electric" id="electric">
+          <label for="electric">Сетевые</label>
+        </section>
+        <input type="submit" value="Показать">          
+      </form>
       <section>
         <h2>Каталог</h2>
         <ul>

@@ -8,16 +8,21 @@
 <!-- Здесь хедер макета -->  	
   	<header>
   		<div>
-  			<a><img src="img/logo.svg" width="220" height="47" alt="Логотип магазина Техномарт"></a>
-  			<!-- Здесь будет форма поиска -->
+  			<a>
+          <img src="img/logo.svg" width="220" height="47" alt="Логотип магазина Техномарт">
+        </a>
+        <form>
+          <label for="search"></label>
+          <input type="search" id="search" placeholder="Поиск:">
+        </form>
   			<a href="#">Закладки: 0</a>
   			<a href="#">Корзина: 0</a>
   			<a href="#">Оформить заказ</a>
   		</div>
   		<div>
   			<p>Интернет-магазин<br>
-  			строительных материалов<br>
-  			и инструментов для ремонта
+  			   строительных материалов<br>
+  			   и инструментов для ремонта
         </p>
   			<a href="#">+7 (812) 555-05-55</a>
   			<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -44,19 +49,152 @@
   	</header>
 <!-- Здесь будет основной контент -->
   	<main>
+      <section>
+        <h2>Категории</h2>
+        <div class="new">
+          <h2>Материалы</h2>
+          <img src="#" width="44" height="65" alt="Иконка категории Материалы">
+          <a href="#">На любой вкус</a>
+        </div>
+        <div>
+          <h2>Инструменты</h2>
+          <img src="#" width="75" height="61" alt="Иконка категории Инструменты">
+          <a href="#">На все случаи</a>
+        </div>
+        <div>
+          <h2>Техника</h2>
+          <img src="#" width="78" height="62" alt="Иконка категории Техника">
+          <a href="#">Для стройки</a>
+        </div>
+        <div>
+          <h2>Дрели</h2>
+          <span>Соседям на радость!</span>
+          <img src="#" width="620" height="266" alt="Работник использует дрель">
+          <a href="catalog.html">Открыть каталог</a>
+        </div>
+        <div>
+          <h2>Скидки 50%</h2>
+          <img src="#" width="59" height="72" alt="Иконка категории Скидки">
+          <a href="#">На 350 товаров</a>
+        </div>
+        <div>
+          <h2>Доставка</h2>
+          <img src="#" width="78" height="63" alt="Иконка Дсотавки">
+          <a href="#">Бесплатно</a>
+        </div>
+      </section>
+      <section>
+        <h2>Популярные товары</h2>
+        <div>
+          <span>Популярные товары:</span>
+          <a href="#">Все популярные товары</a>
+        </div>
+          <ul>
+            <li>
+              <h3>
+                <a href="#">
+                  <span>Перфоратор BOSCH</span>
+                  <span>BFG 9000</span>
+                </a>
+              </h3>
+                <a href="#">
+                  <img src="#" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
+                </a>
+                <b>32500 Р.</b>
+                <a href="#">25500 Р.</a>
+            </li>
+            <li>
+              <h3>
+                <a href="#">
+                  <span>Перфоратор BOSCH</span>
+                  <span>BFG 3000</span>
+                </a>
+              </h3>
+                <a href="#">
+                  <img src="#" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+                </a>
+                <b>22500 Р.</b>
+                <a href="#">15500 Р.</a>
+            </li>
+            <li>
+              <h3>
+                <a href="#">
+                  <span>Перфоратор BOSCH</span>
+                  <span>BFG 6000</span>
+                </a>
+              </h3>
+                <a href="#">
+                  <img src="#" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+                </a>
+                <b>30500 Р.</b>
+                <a href="#">25500 Р.</a>
+            </li>
+            <li class="new">
+              <h3>
+                <a href="#">
+                  <span>Перфоратор BOSCH</span>
+                  <span>BFG 2000</span>
+                </a>
+              </h3>
+                <a href="#">
+                  <img src="#" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
+                </a>
+                <a href="#">12500 Р.</a>
+            </li>
+          </ul>
+      </section>
+      <section>
+        <h2>Популярные производители:</h2>
+        <div>
+          <span>Популярные производители:</span>
+          <a href="#">Все производители</a>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <a href="#"><img src="#" width="126" height="37" alt="Логотип производителя BOSH"></a>
+            </li>
+            <li>
+              <a href="#"><img src="#" width="123" height="40" alt="Логотип производителя Makita"></a>
+            </li>
+            <li>
+              <a href="#"><img src="#" width="146" height="44" alt="Логотип производителя DeWalt"></a>
+            </li>
+            <li>
+              <a href="#"><img src="#" width="200" height="88" alt="Логотип производителя Интерскол"></a>
+            </li>
+            <li>
+              <a href="#"><img src="#" width="169" height="31" alt="Логотип производителя Hitachi"></a>
+            </li>
+            <li>
+              <a href="#"><img src="#" width="151" height="96" alt="Логотип производителя BOSH"></a>
+            </li>
+            <li>
+              <a href="#"><img src="#" width="204" height="69" alt="Логотип производителя metabo"></a>
+            </li>
+          </ul>
+        </div>
+      </section>
   		<section>
   			<h2>Сервисы</h2>
   			   <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
   			     Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
   			   </p>
-  			<div><!-- Здесь будет форма сервисов -->
-  				<a href="#">Доставка</a>
-  				<a href="#">Гарантия</a>
-  				<a href="#">Кредит</a>
-  				<h3>Доставка</h3>
-  				<p>Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж!</p>
-  				<img src="img/serv-delivery.png" width="468" height="261" alt="Иконка грузового авто">
-  			</div>
+  			<div>
+          <form>
+            <input type="radio" name="Delivery" id="buttom-delivery" checked>
+            <label for="buttom-delivery">Доставка</label>
+            <input type="radio" name="Warranty" id="buttom-warranty">
+            <label for="buttom-warranty">Гарантия</label>
+            <input type="radio" name="Credit" id="buttom-credit">
+            <label for="buttom-credit">Кредит</label>
+          </form>
+        </div>
+        <div>
+          <h3>Доставка</h3>
+          <p>Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж!</p>
+          <img src="img/serv-delivery.png" width="468" height="261" alt="Иконка грузового авто">
+        </div>
   		</section>
   		<section>
   			<h2>КОМПАНИЯ «Техномарт»</h2>
