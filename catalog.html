@@ -11,7 +11,10 @@
   			<a href="index.html">
           <img src="img/logo.svg" width="220" height="47" alt="Логотип магазина Техномарт">
         </a>
-  			<!-- Здесь будет форма поиска -->
+        <form>
+          <label for="search"></label>
+          <input type="search" id="search" placeholder="Поиск:">
+        </form>
   			<a href="#">Закладки: 0</a>
   			<a href="#">Корзина: 10</a>
   			<a href="#">Оформить заказ</a>
@@ -51,22 +54,65 @@
       </ul>
       <h1>Перфораторы</h1>
       <section>
-        <h2>Фильтр</h2>
-          <h3>Производители:</h3>
-          <ul>
-            <li><a href="#">BOSCH</a></li>
-            <li><a href="#">ИНТЕРСКОЛ</a></li>
-            <li><a href="#">MAKIta</a></li>
-            <li><a href="#">Dewalt</a></li>
-            <li><a href="#">Hitachi</a></li>
-          </ul>
-        <h3>Питание:</h3>
-          <ul>
-            <li><a href="#">Аккумуляторные</a></li>
-            <li><a href="#">Сетевые</a></li>
-          </ul>
-        <button type="button">Показать</button>
+        <h2>Сортировка</h2>
+        <ul>
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По функционалу</a></li>
+          <li><a href="#"><!--Иконка по возрастанию--></a></li>
+          <li><a href="#"><!--Иконка по убыванию--></a></li>
+        </ul>
       </section>
+      <form>
+        <h2>Фильтр:</h2>
+        <fieldset>
+          <legend>Цена:</legend>
+            <div>
+              <input type="text" name="price"><!--  HiFull – с этим элементом всё сложно (там в итоге даже не инпут будет), поэтому оставим его до лекции так 6-7 -->
+            </div>
+            <div>
+              <input type="text" name="price" value="0">
+              <span>–</span>
+              <input type="text" name="price" value="30000">
+            </div>
+        </fieldset>
+        <fieldset>
+          <legend>Производители:</legend>
+          <div>
+            <input type="checkbox" name="bosh" id="bosh" checked>
+            <label for="bosh">BOSCH</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interskol" id="interskol">
+            <label for="interskol">ИНТЕРСКОЛ</label>
+          </div>
+          <div>
+            <input type="checkbox" name="makita" id="makita" checked>
+            <label for="makita">MAKIta</label>
+          </div>
+          <div>
+            <input type="checkbox" name="dewalt" id="dewalt">
+            <label for="dewalt">Dewalt</label>
+          </div>
+          <div>
+            <input type="checkbox" name="hitachi" id="hitachi">
+            <label for="hitachi">Hitachi</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Питание:</legend>
+          <h3></h3>
+          <div>
+            <input type="radio" name="accumulator" id="accumulator" checked>
+            <label for="accumulator">Аккумуляторные</label>
+          </div>
+          <div>
+            <input type="radio" name="accumulator" id="electric">
+            <label for="electric">Сетевые</label>
+          </div>
+        </fieldset>
+        <button type="button">Показать</button>          
+      </form>
       <section>
         <h2>Каталог</h2>
         <ul>
