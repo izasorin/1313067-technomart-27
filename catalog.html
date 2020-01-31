@@ -53,42 +53,65 @@
         <li>Перфораторы</li>
       </ul>
       <h1>Перфораторы</h1>
+      <section>
+        <h2>Сортировка</h2>
+        <ul>
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По функционалу</a></li>
+          <li><a href="#"><!--Иконка по возрастанию--></a></li>
+          <li><a href="#"><!--Иконка по убыванию--></a></li>
+        </ul>
+      </section>
       <form>
-        <span>Фильтр:</span>
-        <section>
-          <h3>Цена:</h3>
+        <h2>Фильтр:</h2>
+        <fieldset>
+          <legend>Цена:</legend>
             <div>
-              <input type="text" name="price"><!-- Хотел решить с помощью type="range", но понял что это не совсем тот инструмент и решил дождаться лекции по доступности -->
+              <input type="text" name="price"><!--  HiFull – с этим элементом всё сложно (там в итоге даже не инпут будет), поэтому оставим его до лекции так 6-7 -->
             </div>
             <div>
               <input type="text" name="price" value="0">
               <span>–</span>
               <input type="text" name="price" value="30000">
             </div>
-        </section>
-        <hr class="line">
-        <section>
-          <h3>Производители:</h3>
-          <input type="checkbox" name="bosh" id="bosh" checked>
-          <label for="bosh">BOSCH</label>
-          <input type="checkbox" name="interskol" id="interskol">
-          <label for="interskol">ИНТЕРСКОЛ</label>
-          <input type="checkbox" name="makita" id="makita" checked>
-          <label for="makita">MAKIta</label>
-          <input type="checkbox" name="dewalt" id="dewalt">
-          <label for="dewalt">Dewalt</label>
-          <input type="checkbox" name="hitachi" id="hitachi">
-          <label for="hitachi">Hitachi</label>
-        </section>
-        <hr class="line">
-        <section>
-          <h3>Питание:</h3>
-          <input type="radio" name="accumulator" id="accumulator" checked>
-          <label for="accumulator">Аккумуляторные</label>
-          <input type="radio" name="electric" id="electric">
-          <label for="electric">Сетевые</label>
-        </section>
-        <input type="submit" value="Показать">          
+        </fieldset>
+        <fieldset>
+          <legend>Производители:</legend>
+          <div>
+            <input type="checkbox" name="bosh" id="bosh" checked>
+            <label for="bosh">BOSCH</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interskol" id="interskol">
+            <label for="interskol">ИНТЕРСКОЛ</label>
+          </div>
+          <div>
+            <input type="checkbox" name="makita" id="makita" checked>
+            <label for="makita">MAKIta</label>
+          </div>
+          <div>
+            <input type="checkbox" name="dewalt" id="dewalt">
+            <label for="dewalt">Dewalt</label>
+          </div>
+          <div>
+            <input type="checkbox" name="hitachi" id="hitachi">
+            <label for="hitachi">Hitachi</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Питание:</legend>
+          <h3></h3>
+          <div>
+            <input type="radio" name="accumulator" id="accumulator" checked>
+            <label for="accumulator">Аккумуляторные</label>
+          </div>
+          <div>
+            <input type="radio" name="accumulator" id="electric">
+            <label for="electric">Сетевые</label>
+          </div>
+        </fieldset>
+        <button type="button">Показать</button>          
       </form>
       <section>
         <h2>Каталог</h2>
