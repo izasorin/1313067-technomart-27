@@ -11,7 +11,7 @@
         <a href="index.html">
           <img src="img/svg/logo-head.svg" width="109" height="19" alt="Логотип магазина Техномарт"/>
         </a>
-        <form>
+        <form action="#" method="get">
           <label for="search">
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
               <path fill="#231F20" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
@@ -44,7 +44,7 @@
           </li>
           <li>
             <button>
-              <!-- Иконка выхода из личного кабинета :opacity -->
+              Выход<!-- Иконка выхода из личного кабинета :opacity -->
             </button>
           </li>
           <li>
@@ -131,7 +131,7 @@
           </li>
         </ul>
       </section>
-      <form>
+      <form action="#" method="get">
         <h2>Фильтр:</h2>
         <fieldset>
           <legend>Цена:</legend>
@@ -181,7 +181,7 @@
         <button type="button">Показать</button>
       </form>
       <section>
-        <h2>Каталог</h2>
+        <h2 class="visually-hidden">Каталог</h2>
         <ul>
           <li>
             <h3>
@@ -328,8 +328,8 @@
     <!-- Здесь фтуер макета -->
     <footer>
       <section>
-        <h2>Контактная информация</h2>
-        <a>
+        <h2 class="visually-hidden">Контактная информация</h2>
+        <a href="index.html">
           <img src="img/svg/logo-footer.svg" width="138" height="23" alt="Логотип магазина Техномарт" />
         </a>
         <ul>
@@ -369,7 +369,7 @@
         </ul>
       </section>
       <section>
-        <h2>Данные о компании</h2>
+        <h2 class="visually-hidden">Данные о компании</h2>
         <p>
           © 2010–2019 Компания «Техномарт»<br />
           Все права защищены
@@ -409,5 +409,23 @@
         </p>
       </section>
     </footer>
+    <section class="modal modal-check">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" viewBox="0 0 66 66">
+          <circle cx="33" cy="33" r="33" fill="#63A63E"/>
+          <path fill="#FFF" d="M49.641 21.066a1.003 1.003 0 0 0-1.414 0L29.788 39.504a1.003 1.003 0 0 1-1.414 0l-8.14-8.139a1.003 1.003 0 0 0-1.414 0L15.285 34.9a1.003 1.003 0 0 0 0 1.414l13.089 13.09a1.003 1.003 0 0 0 1.414 0l3.536-3.536 1.414-1.414 18.438-18.438a1.003 1.003 0 0 0 0-1.414l-3.535-3.536z"/>
+        </svg>
+      </span>
+      <span>Товар добавлен в корзину!</span>
+      <ul>
+        <li>
+          <a href="#">Оформить заказ</a>
+        </li>
+        <li>
+          <a href="#">Продолжить покупки</a>
+        </li>
+      </ul>
+      <button type="button">Закрыть</button>
+    </section>
   </body>
 </html>
