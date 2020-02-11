@@ -10,17 +10,17 @@
   <body>
     <!-- Здесь хедер макета -->
     <header>
-      <div>
+      <div class="head-navigation">
         <a href="index.html">
           <img src="img/svg/logo-head.svg" width="109" height="19" alt="Логотип магазина Техномарт"/>
         </a>
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
           <label for="search">
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
               <path fill="#231F20" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
             </svg>
           </label>
-          <input type="search" id="search" name="search" placeholder="Поиск:" />
+          <input type="text" id="search" name="search" placeholder="Поиск:" />
         </form>
         <a href="#">Закладки: 0</a>
         <!-- :opacity -->
@@ -28,7 +28,7 @@
         <!-- :opacity -->
         <a href="#">Оформить заказ</a>
       </div>
-      <div>
+      <div class="user-navigation log-in">
         <p>
           Интернет-магазин<br />
           строительных материалов<br />
@@ -59,7 +59,7 @@
         </ul>
       </div>
       <nav>
-        <ul>
+        <ul class="main-navigation">
           <li>
             <a href="index.html">Главная</a>
           </li>
@@ -86,7 +86,7 @@
     </header>
     <!-- Здесь будет основной контент -->
     <main>
-      <ul>
+      <ul class="breadcrumb">
         <li>
           <a href="index.html">
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" >
@@ -106,7 +106,7 @@
         <li>Перфораторы</li>
       </ul>
       <h1>Перфораторы</h1>
-      <section>
+      <section class="sorting">
         <h2>Сортировка</h2>
         <ul>
           <li>
@@ -134,9 +134,9 @@
           </li>
         </ul>
       </section>
-      <form action="https://echo.htmlacademy.ru" method="get">
+      <form class="filter" action="https://echo.htmlacademy.ru" method="get">
         <h2>Фильтр:</h2>
-        <fieldset>
+        <fieldset class="price-filter">
           <legend>Цена:</legend>
           <div>
             <input type="text" name="price" /><!--  HiFull – с этим элементом всё сложно (там в итоге даже не инпут будет), поэтому оставим его до лекции так 6-7 -->
@@ -147,7 +147,7 @@
             <input type="text" name="price" value="30000" />
           </div>
         </fieldset>
-        <fieldset>
+        <fieldset class="brand-filter">
           <legend>Производители:</legend>
           <div>
             <input type="checkbox" name="bosh" id="bosh" checked />
@@ -170,7 +170,7 @@
             <label for="hitachi">Hitachi</label>
           </div>
         </fieldset>
-        <fieldset>
+        <fieldset class="accumulator-filter">
           <legend>Питание:</legend>
           <div>
             <input type="radio" name="accumulator" id="accumulator" checked />
@@ -183,12 +183,12 @@
         </fieldset>
         <button type="button">Показать</button>
       </form>
-      <section>
+      <section class="product-listing">
         <h2 class="visually-hidden">Каталог</h2>
         <ul>
           <li>
             <h3>
-              <a href="#">
+              <a class="product-name" href="#">
                 <span>Перфоратор BOSCH</span>
                 <span>BFG 3000</span>
               </a>
@@ -197,11 +197,11 @@
               <img src="img/product-bosh-bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000" />
             </a>
             <b>22500 Р.</b>
-            <a href="#">15500 Р.</a>
+            <a class="product-price" href="#">15500 Р.</a>
           </li>
           <li>
             <h3>
-              <a href="#">
+              <a class="product-name" href="#">
                 <span>Перфоратор BOSCH</span>
                 <span>BFG 6000</span>
               </a>
@@ -210,11 +210,11 @@
               <img src="img/product-bosh-bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000" />
             </a>
             <b>30500 Р.</b>
-            <a href="#">25500 Р.</a>
+            <a class="product-price" href="#">25500 Р.</a>
           </li>
-          <li class="new">
+          <li class="product-new">
             <h3>
-              <a href="#">
+              <a class="product-name" href="#">
                 <span>Перфоратор BOSCH</span>
                 <span>BFG 2000</span>
               </a>
@@ -222,18 +222,15 @@
             <a href="#">
               <img src="img/product-bosh-bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000" />
             </a>
-            <a href="#">12500 Р.</a>
-            <div>
-              <a href="#">
-                <!-- :opacity -->
-                Купить
-              </a>
+            <a class="product-price" href="#">12500 Р.</a>
+            <div class="product-action">
+              <a href="#">Купить</a>
               <a href="#">В закладки</a>
             </div>
           </li>
           <li>
             <h3>
-              <a href="#">
+              <a class="product-name" href="#">
                 <span>Перфоратор BOSCH</span>
                 <span>BFG 3000</span>
               </a>
@@ -242,11 +239,11 @@
               <img src="img/product-bosh-bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000" />
             </a>
             <b>22500 Р.</b>
-            <a href="#">15500 Р.</a>
+            <a class="product-price" href="#">15500 Р.</a>
           </li>
-          <li class="new">
+          <li class="product-new">
             <h3>
-              <a href="#">
+              <a class="product-name" href="#">
                 <span>Перфоратор BOSCH</span>
                 <span>BFG 6000</span>
               </a>
@@ -255,11 +252,11 @@
               <img src="img/product-bosh-bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000" />
             </a>
             <b>30500 Р.</b>
-            <a href="#">25500 Р.</a>
+            <a class="product-price" href="#">25500 Р.</a>
           </li>
           <li>
             <h3>
-              <a href="#">
+              <a class="product-name" href="#">
                 <span>Перфоратор BOSCH</span>
                 <span>BFG 2000</span>
               </a>
@@ -267,11 +264,11 @@
             <a href="#">
               <img src="img/product-bosh-bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000" />
             </a>
-            <a href="#">12500 Р.</a>
+            <a class="product-price" href="#">12500 Р.</a>
           </li>
-          <li class="new">
+          <li class="product-new">
             <h3>
-              <a href="#">
+              <a class="product-name" href="#">
                 <span>Перфоратор BOSCH</span>
                 <span>BFG 3000</span>
               </a>
@@ -280,11 +277,11 @@
               <img src="img/product-bosh-bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000" />
             </a>
             <b>22500 Р.</b>
-            <a href="#">15500 Р.</a>
+            <a class="product-price" href="#">15500 Р.</a>
           </li>
           <li>
             <h3>
-              <a href="#">
+              <a class="product-name" href="#">
                 <span>Перфоратор BOSCH</span>
                 <span>BFG 6000</span>
               </a>
@@ -293,11 +290,11 @@
               <img src="img/product-bosh-bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000" />
             </a>
             <b>30500 Р.</b>
-            <a href="#">25500 Р.</a>
+            <a class="product-price" href="#">25500 Р.</a>
           </li>
           <li>
             <h3>
-              <a href="#">
+              <a class="product-name" href="#">
                 <span>Перфоратор BOSCH</span>
                 <span>BFG 2000</span>
               </a>
@@ -305,17 +302,17 @@
             <a href="#">
               <img src="img/product-bosh-bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000" />
             </a>
-            <a href="#">12500 Р.</a>
+            <a class="product-price" href="#">12500 Р.</a>
           </li>
         </ul>
-        <ul>
+        <ul class="pages-navigation">
           <li><a>1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">Следующая</a></li>
         </ul>
       </section>
-      <section>
+      <section class="about-content">
         <h2>Пара слов о перфораторах</h2>
         <p>
           Перфоратор — универсальный строительный инструмент. Предназначен для
@@ -330,14 +327,14 @@
     </main>
     <!-- Здесь фтуер макета -->
     <footer>
-      <section>
+      <div class="footer-contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
-        <a href="index.html">
-          <img src="img/svg/logo-footer.svg" width="138" height="23" alt="Логотип магазина Техномарт" />
+        <a class="footer-logo">
+          <img src="img/svg/logo-footer.svg" width="138" height="23" alt="Логотип магазина Техномарт"/>
         </a>
-        <ul>
+        <ul class="footer-navigation">
           <li>
-            <a href="#">Компания</a>
+            <a href="">Компания</a>
           </li>
           <li>
             <a href="#">Новости</a>
@@ -356,7 +353,7 @@
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br />
           <a href="#">+7 (812) 555-05-55</a>
         </p>
-        <ul>
+        <ul class="footer-category">
           <li>
             <a href="#">Материалы</a>
           </li>
@@ -370,14 +367,14 @@
             <a href="#">Спецпредложения</a>
           </li>
         </ul>
-      </section>
-      <section>
+      </div>
+      <div class="footer-about">
         <h2 class="visually-hidden">Данные о компании</h2>
         <p>
           © 2010–2019 Компания «Техномарт»<br />
           Все права защищены
         </p>
-        <div>
+        <div class="footer-social">
           <ul>
             <li>
               <a href="#">
@@ -410,22 +407,17 @@
           Разработано<br />
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
-      </section>
+      </div>
     </footer>
     <section class="modal modal-check">
-      <span>
-        <!-- : background-image -->
-      </span>
-      <span>Товар добавлен в корзину!</span>
-      <ul>
-        <li>
-          <a href="#">Оформить заказ</a>
-        </li>
-        <li>
-          <a href="#">Продолжить покупки</a>
-        </li>
-      </ul>
-      <button type="button">Закрыть</button>
+      <div>
+        <p>Товар добавлен в корзину!</p>
+        <button type="button"></button>
+      </div>
+      <div>
+        <a href="#">Оформить заказ</a>
+        <button type="button">Продолжить покупки</button>
+      </div>
     </section>
   </body>
 </html>

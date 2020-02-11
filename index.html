@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <title>Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -14,19 +13,19 @@
         <a>
           <img src="img/svg/logo-head.svg" width="109" height="19" alt="Логотип магазина Техномарт" />
         </a>
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
           <label for="search">
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
               <path fill="#231F20" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
             </svg>
           </label>
-          <input type="search" id="search" name="search" placeholder="Поиск:" />
+          <input type="text" id="search" name="search" placeholder="Поиск:" />
         </form>
         <a href="#">Закладки: 0</a>
         <a href="#">Корзина: 0</a>
         <a href="#">Оформить заказ</a>
       </div>
-      <div class="user-navigation">
+      <div class="user-navigation log-out">
         <p>
           Интернет-магазин<br />
           строительных материалов<br />
@@ -50,13 +49,27 @@
       </div>
       <nav>
         <ul class="main-navigation">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li>
+            <a href="#">Главная</a>
+          </li>
+          <li>
+            <a href="#">Компания</a>
+          </li>
+          <li>
+            <a href="#">Каталог</a>
+          </li>
+          <li>
+            <a href="#">Новости</a>
+          </li>
+          <li>
+            <a href="#">Спецпредложения</a>
+          </li>
+          <li>
+            <a href="#">Доставка</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -262,43 +275,63 @@
             Вы можете забрать товар сами,<br />
             заехав в наш офис:
           </p>
-          <img src="img/map-small.png" width="300" height="158" alt="Схема проезда до магазина по адресу Большая Конюшенная, дом 19/8" />
+          <div>
+            <img src="img/map-small.png" width="300" height="158" alt="Схема проезда до магазина по адресу Большая Конюшенная, дом 19/8" />
+          </div>
           <a href="mailto:mail@htmlacademy.ru?subject=Feedback">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
     <!-- Здесь фтуер макета -->
     <footer>
-      <section class="footer-contacts">
+      <div class="footer-contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
         <a class="footer-logo">
           <img src="img/svg/logo-footer.svg" width="138" height="23" alt="Логотип магазина Техномарт"/>
         </a>
         <ul class="footer-navigation">
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li>
+            <a href="">Компания</a>
+          </li>
+          <li>
+            <a href="#">Новости</a>
+          </li>
+          <li>
+            <a href="#">Каталог</a>
+          </li>
+          <li>
+            <a href="#">Доставка</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
         </ul>
         <p>
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br />
           <a href="#">+7 (812) 555-05-55</a>
         </p>
         <ul class="footer-category">
-          <li><a href="#">Материалы</a></li>
-          <li><a href="#">Техника</a></li>
-          <li><a href="#">Инструмент</a></li>
-          <li><a href="#">Спецпредложения</a></li>
+          <li>
+            <a href="#">Материалы</a>
+          </li>
+          <li>
+            <a href="#">Техника</a>
+          </li>
+          <li>
+            <a href="#">Инструмент</a>
+          </li>
+          <li>
+            <a href="#">Спецпредложения</a>
+          </li>
         </ul>
-      </section>
-      <section class="footer-about">
+      </div>
+      <div class="footer-about">
         <h2 class="visually-hidden">Данные о компании</h2>
         <p>
           © 2010–2019 Компания «Техномарт»<br />
           Все права защищены
         </p>
-        <div>
+        <div class="footer-social">
           <ul>
             <li>
               <a href="#">
@@ -331,11 +364,13 @@
           Разработано<br />
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
-      </section>
+      </div>
     </footer>
+    <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="modal modal-feedback">
-          <legend class="visually-hidden">Форма обратной связи</legend>
+        <fieldset>
+          <!-- <legend class="visually-hidden">Форма обратной связи</legend> – Не до конца понял, можно ли безболезнено исключать элемент fieldset? При выборе скрытого заголвока, остановился на скрытом h2 для section -->
           <div>
             <label for="user-name">Ваше имя:</label>
             <input id="user-name" type="text" placeholder="Имя Фамилия">
@@ -351,12 +386,13 @@
           <button type="submit">Отправить</button>
         </fieldset>
       </form>
-      <section class="modal modal-map">
-        <h2 class="visually-hidden">Карта</h2>
+    </section>
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Карта</h2>
         <p>
           <img src="img/map-big.jpg" width="940" height="446" alt="Схема проезда до магазина по адресу Большая Конюшенная, дом 19/8">
         </p>
         <button type="button">Закрыть</button>
-      </section>
+    </section>
   </body>
 </html>
