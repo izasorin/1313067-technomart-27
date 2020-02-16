@@ -301,6 +301,10 @@ input::placeholder {
   background-color: #161d29;
 }
 
+.main-navigation a:nth-of-type(1) {
+  color: #ba2732;
+}
+
 .breadcrumb li,
 .breadcrumb a {
   font-family: "PT-Sans-Regular", Arial, sans-serif;
