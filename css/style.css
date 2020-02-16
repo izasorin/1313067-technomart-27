@@ -84,12 +84,6 @@ a {
   overflow: hidden;
 }
 
-/*
-.visually-hidden {
-  display: none;
-}
-*/
-
 .list-styles-reset {
   list-style: none;
 }
@@ -103,7 +97,11 @@ a {
   display: none;
 }
 
-.main-header {
+.catalog-header {
+  background-color: #f4f7f9;
+}
+
+.index-header {
   background-color: #f4f7f9;
 }
 
@@ -312,7 +310,7 @@ input::placeholder {
   color: #000000;
 }
 
-.main-title {
+.catalog-title {
   padding: 32px 742px 34px 30px;
   font-size: 30px;
   line-height: 1;
