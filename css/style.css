@@ -255,6 +255,7 @@ input::placeholder {
   background-color: #ffffff;
 }
 
+/* Упростить */
 .log-in li:not(:nth-of-type(1)) a {
   font-size: 16px;
   line-height: 1.12;
@@ -269,6 +270,8 @@ input::placeholder {
 .log-in li:not(:nth-of-type(1)) a:focus {
   color: rgba(55, 66, 92, 0.3);
 }
+/* Упростить */
+
 
 /*
 .log-in li:first-of-type a:hover {
@@ -299,10 +302,6 @@ input::placeholder {
 .main-navigation a:focus {
   color: rgba(255, 255, 255, 0.5);
   background-color: #161d29;
-}
-
-.main-navigation a:nth-of-type(1) {
-  color: #ba2732;
 }
 
 .breadcrumb li,
