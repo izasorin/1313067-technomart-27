@@ -73,7 +73,7 @@ a {
   text-decoration: none;
 }
 
-.visually-hidden { 
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -97,11 +97,11 @@ a {
   display: none;
 }
 
-.catalog-header {
+.page-header {
   background-color: #f4f7f9;
 }
 
-.index-header {
+.page-header {
   background-color: #f4f7f9;
 }
 
@@ -114,7 +114,7 @@ a {
 }
 
 .head-navigation img {
-  padding: 13px 56px 10px 55px;
+  padding: 13px 56px 13px 55px;
   background-color: #ee3643;
   box-shadow: 0px 5px 0px 0px #9c2d36;
 }
@@ -128,9 +128,7 @@ a {
 }
 
 .head-navigation a:last-child {
-  width: 150px;
-  height: 42px;
-  padding: 14px 22px 13px 20px;
+  padding: 13px 22px 12px 20px;
   font-size: 17px;
   line-height: 1.05;
   background-color: #63a63e;
@@ -156,17 +154,6 @@ a {
   background-color: #161d29;
 }
 
-/* вот это селектор :0
-.head-navigation a:not(:first-child):not(:last-child):hover {
-  background-color: #212a3a;
-}
-
-.head-navigation a:not(:first-child):not(:last-child):focus {
-  color: rgba(255, 255, 255, 0.6);
-  background-color: #161d29;
-}
-*/
-
 .header-search input,
 .header-search button {
   border: none;
@@ -174,8 +161,6 @@ a {
 }
 
 .header-search input {
-  width: 270px;
-  height: 42px;
   padding-left: 49px;
   color: #ffffff;
   background: #293449;
@@ -198,20 +183,23 @@ input::placeholder {
 }
 
 .user-navigation p:first-of-type {
-  font-family: "Cuprum-Regular", Arial, sans-serif;
+  font-family: "Cuprum-Italic", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.43;
   color: #ee3643;
 }
 
-.user-navigation p:nth-of-type(2) {
+.header-contacts p:first-of-type {
+  margin-top: 5px;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.7;
   color: #32425c;
 }
 
-.user-navigation a:nth-child(2) {
+.header-contacts a:first-of-type {
   padding: 13px 45px 11px 75px;
+  margin-bottom: 0;
   font-size: 21px;
   line-height: 1;
   color: #ee3643;
@@ -227,7 +215,8 @@ input::placeholder {
 .log-out li:first-of-type a {
   width: 121px;
   height: 45px;
-  padding: 14px 27px 15px 48px;
+  margin-right: 5px;
+  padding: 14px 27px 11px 48px;
   background-size: 20px 17px;
   background: url(/img/svg/login-icon.svg) no-repeat #ffffff;
 }
@@ -235,6 +224,7 @@ input::placeholder {
 .log-out li:nth-of-type(2) a {
   width: 150px;
   height: 45px;
+  margin-left: 5px;
   padding: 14px 25px 11px 25px;
   background-color: #ffffff;
 }
@@ -255,23 +245,23 @@ input::placeholder {
   background-color: #ffffff;
 }
 
-/* Упростить */
-.log-in li:not(:nth-of-type(1)) a {
+.log-in li:nth-child(2) a,
+.log-in li:nth-child(3) a {
   font-size: 16px;
   line-height: 1.12;
   text-decoration: underline;
   color: #32425c;
 }
 
-.log-in li:not(:nth-of-type(1)) a:hover {
+.log-in li:nth-child(2) a:hover,
+.log-in li:nth-child(3) a:hover {
   color: #ee3643;
 }
 
-.log-in li:not(:nth-of-type(1)) a:focus {
+.log-in li:nth-child(2) a:focus,
+.log-in li:nth-child(3) a:focus {
   color: rgba(55, 66, 92, 0.3);
 }
-/* Упростить */
-
 
 /*
 .log-in li:first-of-type a:hover {
@@ -557,3 +547,69 @@ input::placeholder {
   text-decoration: none;
   color: #ee3643;
 }
+
+/* ----- Сеточные стили header ----- */
+
+html,
+body {
+  min-width: 940px;
+}
+
+
+/* ----- Сеточные стили header ----- */
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head-navigation-wrapper {
+  width: 100%;
+  margin-bottom: 46px;
+  background-color: #293449;
+}
+
+.head-navigation {
+  width: 940px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.user-navigation {
+  width: 940px;
+  margin: 0 auto;
+  margin-bottom: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.main-navigation {
+  width: 940px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 60px;
+  padding: 0;
+}
+
+
+.log-out {
+  display: flex;
+  align-content: center;
+}
+
+.header-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* ----- Сеточные стили footer ----- */
