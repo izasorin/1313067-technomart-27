@@ -66,7 +66,6 @@ body {
   line-height: 1;
   font-weight: normal;
   color: #ffffff;
-  background-color: #c1c1c1; /* добавил фон для удобства */
 }
 
 a {
@@ -106,7 +105,6 @@ a {
 }
 
 .head-navigation {
-  width: 1200px;
   height: 42px;
   font-size: 17px;
   line-height: 1.05;
@@ -275,7 +273,7 @@ input::placeholder {
 
 .main-navigation {
   width: 940px;
-  height: 60px;
+  min-height: 60px;
   background-color: #293449;
 }
 
@@ -422,6 +420,7 @@ input::placeholder {
 }
 
 .about-company h2 {
+  margin-bottom: 38px;
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
@@ -436,6 +435,7 @@ input::placeholder {
 }
 
 .about-company ul {
+  margin-bottom: 37px;
   font-size: 18px;
   line-height: 1.11;
   text-transform: none;
@@ -443,9 +443,7 @@ input::placeholder {
 }
 
 .about-company a {
-  width: 220px;
-  height: 38px;
-  padding: 14px 40px 12px 41px;
+  padding: 14px 41px 12px 40px;
   font-size: 14px;
   line-height: 1.28;
   text-transform: uppercase;
@@ -454,6 +452,7 @@ input::placeholder {
 }
 
 .contacts-company h2 {
+  margin-bottom: 38px;
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
@@ -461,16 +460,20 @@ input::placeholder {
 }
 
 .contacts-company p {
+  margin-bottom: 33px;
   font-family: "PT-Sans-Regular", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
 }
 
+.map-mini {
+  margin-bottom: 36px;
+}
+
 .contacts-company a {
-  width: 220px;
-  height: 38px;
-  padding: 14px 40px 12px 41px;
+  padding: 14px 63px 12px 60px;
+  
   font-size: 14px;
   line-height: 1.28;
   text-transform: uppercase;
@@ -479,8 +482,7 @@ input::placeholder {
 }
 
 .footer-contacts {
-  width: 1200px;
-  height: 300px;
+  min-height: 193px;
   font-size: 18px;
   line-height: 1.33;
   background-color: #32425c;
@@ -505,6 +507,7 @@ input::placeholder {
   padding: 20px 41px 20px 41px;
   background-color: #ee3643;
   box-shadow: 0px 5px 0px 0px #9c2d36;
+  margin-right: 173px;
 }
 
 .footer-logo img:hover {
@@ -528,8 +531,7 @@ input::placeholder {
 }
 
 .footer-about {
-  width: 1200px;
-  height: 107px;
+  min-height: 107px;
   font-size: 16px;
   line-height: 1.12;
   background-color: #293449;
@@ -548,13 +550,18 @@ input::placeholder {
   color: #ee3643;
 }
 
-/* ----- Сеточные стили header ----- */
+/* ----- Сеточные стили ----- */
 
 html,
 body {
   min-width: 940px;
 }
 
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 
 /* ----- Сеточные стили header ----- */
 
@@ -571,8 +578,6 @@ body {
 }
 
 .head-navigation {
-  width: 940px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -580,8 +585,6 @@ body {
 
 
 .user-navigation {
-  width: 940px;
-  margin: 0 auto;
   margin-bottom: 44px;
   display: flex;
   justify-content: space-between;
@@ -590,8 +593,6 @@ body {
 }
 
 .main-navigation {
-  width: 940px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -611,5 +612,104 @@ body {
   align-items: center;
 }
 
+/* ----- Сеточные стили main ----- */
+
+.info-company { 
+  display: flex;
+  justify-content: space-between;
+  padding-top: 82px;
+  padding-bottom: 86px;
+}
+
+.about-company { 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contacts-company { 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.info-delviery li:nth-of-type(1),
+.info-delviery li:nth-of-type(2) {
+  margin-bottom: 23px;
+}
 
 /* ----- Сеточные стили footer ----- */
+
+
+.footer-contacts-wrapper {
+  width: 100%;
+  margin-bottom: 0;
+  background-color: #32425c;
+}
+
+.footer-contacts { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.footer-navigation { 
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  align-items: stretch;
+  margin-bottom: 0;
+}
+
+.footer-category {
+  display: flex;
+  order: 2;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.address {
+  order: 1;
+  margin-right: 90px;
+}
+
+
+
+
+
+
+
+.footer-about-wrapper { 
+  width: 100%;
+  background-color: #293449;
+}
+
+.footer-about { 
+  display: flex;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+}
+
+.footer-social li {
+  width: 42px;
+  height: 42px;
+}
+
+.footer-links {
+  display: flex;
+  margin-left: auto;
+}
+
+.footer-copywrite { 
+  margin-right: auto;
+}
+
+.footer-feedback { 
+  margin-right: 53px;
+}
