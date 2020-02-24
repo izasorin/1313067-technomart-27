@@ -314,6 +314,15 @@ input::placeholder {
   text-transform: uppercase;
 }
 
+.filter h2 {
+  padding: 14px 149px 15px 18px;
+  font-family: "PT-Sans-Regular", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.38;
+  color: #000000;
+  background-color: #f7f3ec;
+}
+
 .filter fieldset {
   border: none;
 }
@@ -323,6 +332,7 @@ input::placeholder {
   line-height: 1.33;
   color: #000000;
 }
+
 
 .brand-filter legend,
 .accumulator-filter legend {
@@ -632,13 +642,12 @@ body {
   padding: 0;
   margin: 0;
   margin-top: 20px;
-  margin-right: -30px; /* ??? */
+  margin-right: -30px;
 }
 
 .log-in {
   display: flex;
 }
-
 
 .main-navigation {
   width: 940px;
