@@ -34,7 +34,7 @@
           и инструментов для ремонта
         </p>
         <div class="header-contacts">
-          <a class="head-phone" href="#">
+          <a class="head-phone" href="tel:+78125550555">
             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
               <path fill="#B7BFC8" d="M15.572 18.985h-.941c-4.129-.488-7.157-2.408-9.359-4.864C3.062 11.66 1.318 8.492.978 4.228V3.084c.078-.774.459-1.304.898-1.757C2.425.766 3.25.044 4.002.019c.554-.018 1.5.38 1.879.899.329.446.504 1.339.656 2.003.154.671.505 1.643.408 2.289-.148 1.007-1.487 1.434-1.879 2.166 1.307 3.135 3.443 5.439 6.293 7.031.715-.392 1.346-1.572 2.332-1.595.359-.009.818.178 1.184.286.402.121.75.275 1.104.408.596.224 1.648.521 2.004 1.021.365.513.57 1.356.49 1.879-.164 1.041-1.879 2.197-2.901 2.579z" />
             </svg>
@@ -42,17 +42,19 @@
           </a>
           <p class="head-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <ul class="list-styles-reset log-in ">
-          <li>
-            <a href="#">Равшан Джамшутович</a>
-          </li>
-          <li>
-            <a href="#">Мои заказы</a>
-          </li>
-          <li>
-            <a href="#">Личный кабинет</a>
-          </li>
-        </ul>
+        <div>
+          <ul class="log-in list-styles-reset">
+            <li>
+              <a class="user-name" href="#">Равшан Джамшутович</a>
+            </li>
+            <li>
+              <a href="#">Мои заказы</a>
+            </li>
+            <li>
+              <a href="#">Личный кабинет</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <nav>
         <ul class="main-navigation container list-styles-reset">
@@ -101,7 +103,9 @@
             <li class="breadcrumb-item">
               <a href="#">Инструмент</a>
             </li>
-            <li>Перфораторы</li>
+            <li class="breadcrumb-item">
+              <a>Перфораторы</a>
+            </li>
           </ul>
         </div>
         <h1 class="catalog-title">Перфораторы</h1>
@@ -109,79 +113,84 @@
           <div class="filter">
             <form action="https://echo.htmlacademy.ru" method="get">
               <h2>Фильтр:</h2>
-              <fieldset class="price-filter">
-                <legend>Цена:</legend>
-                <div>
-                  <input type="text" name="price" /><!--  HiFull – с этим элементом всё сложно (там в итоге даже не инпут будет), поэтому оставим его до лекции так 6-7 -->
-                </div>
-                <div>
-                  <input type="text" name="price" value="0" />
-                  <span>–</span>
-                  <input type="text" name="price" value="30000" />
-                </div>
-              </fieldset>
               <!--        -               -               -               -               -        -->
-              <fieldset class="brand-filter">
-                <legend>Производители:</legend>
-                <div>
-                  <input type="checkbox" name="bosh" id="bosh" checked />
-                  <label for="bosh">BOSCH</label>
-                </div>
-                <div>
-                  <input type="checkbox" name="interskol" id="interskol" />
-                  <label for="interskol">ИНТЕРСКОЛ</label>
-                </div>
-                <div>
-                  <input type="checkbox" name="makita" id="makita" checked />
-                  <label for="makita">MAKIta</label>
-                </div>
-                <div>
-                  <input type="checkbox" name="dewalt" id="dewalt" />
-                  <label for="dewalt">Dewalt</label>
-                </div>
-                <div>
-                  <input type="checkbox" name="hitachi" id="hitachi" />
-                  <label for="hitachi">Hitachi</label>
-                </div>
-              </fieldset>
+              <div class="price-filter">
+                <fieldset>
+                  <legend>Цена:</legend>
+                  <div>
+                    <input type="text" name="price" /><!--  HiFull – с этим элементом всё сложно (там в итоге даже не инпут будет), поэтому оставим его до лекции так 6-7 -->
+                  </div>
+                  <div>
+                    <input type="text" name="price" value="0" />
+                    <span>–</span>
+                    <input type="text" name="price" value="30000" />
+                  </div>
+                </fieldset>
+              </div>
               <!--        -               -               -               -               -        -->
-              <fieldset class="accumulator-filter">
-                <legend>Питание:</legend>
-                <div>
-                  <input type="radio" name="accumulator" id="accumulator" checked />
-                  <label for="accumulator">Аккумуляторные</label>
-                </div>
-                <div>
-                  <input type="radio" name="accumulator" id="electric" />
-                  <label for="electric">Сетевые</label>
-                </div>
-              </fieldset>
-              <!--        -               -               -               -               -        -->
-              <button type="button">Показать</button>
+              <div class="brand-filter">
+                <fieldset>
+                  <legend>Производители:</legend>
+                  <div class="filter-item ">
+                    <input type="checkbox" name="bosh" id="bosh" checked />
+                    <label for="bosh">BOSCH</label>
+                  </div>
+                  <div class="filter-item">
+                    <input type="checkbox" name="interskol" id="interskol" />
+                    <label for="interskol">ИНТЕРСКОЛ</label>
+                  </div>
+                  <div class="filter-item">
+                    <input type="checkbox" name="makita" id="makita" checked />
+                    <label for="makita">MAKIta</label>
+                  </div>
+                  <div class="filter-item">
+                    <input type="checkbox" name="dewalt" id="dewalt" />
+                    <label for="dewalt">Dewalt</label>
+                  </div>
+                  <div class="filter-item">
+                    <input type="checkbox" name="hitachi" id="hitachi" />
+                    <label for="hitachi">Hitachi</label>
+                  </div>
+                </fieldset>
+              </div>
+              <div  class="accumulator-filter">
+                <fieldset>
+                  <legend>Питание:</legend>
+                  <div class="filter-item ">
+                    <input type="radio" name="accumulator" id="accumulator" checked />
+                    <label for="accumulator">Аккумуляторные</label>
+                  </div>
+                  <div class="filter-item ">
+                    <input type="radio" name="accumulator" id="electric" />
+                    <label for="electric">Сетевые</label>
+                  </div>
+                </fieldset>
+              </div>
+              <button type="submit">Показать</button>
             </form>
           </div>
           <div class="catalog-list">
             <section class="sorting">
-              <h2>Сортировка</h2>
+              <h2>Сортировка:</h2>
               <ul class="sorting list-styles-reset">
                 <li>
-                  <a href="#">По цене</a>
+                  <a class="sorting-by-price" href="#">По цене</a>
                 </li>
                 <li>
-                  <a href="#">По типу</a>
+                  <a class="sorting-by-type" href="#">По типу</a>
                 </li>
                 <li>
-                  <a href="#">По функционалу</a>
+                  <a class="sorting-by-functional" href="#">По функционалу</a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a class="sorting-up" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                       <path fill="#231F20" d="M5.5 0L0 10h11z" />
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a class="sorting-down" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                       <path fill="#231F20" d="M5.5 10L0 0h11" />
                     </svg>
@@ -314,7 +323,7 @@
       </div>
       <div class="about-content-wrapper">
         <section class="about-content container">
-          <h2>Пара слов о перфораторах</h2>
+          <h2>Пара слов о перфораторах</h2> <!-- -->
           <p>
             Перфоратор — универсальный строительный инструмент. Предназначен для
             сверления и долбления отверстий в кирпиче, бетоне и камне.<br />
@@ -337,7 +346,7 @@
           </a>
           <p class="address">
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br />
-            <a href="#">+7 (812) 555-05-55</a>
+            <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           </p>
           <ul class="footer-navigation list-styles-reset">
             <li>
