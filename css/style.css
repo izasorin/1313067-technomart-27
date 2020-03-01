@@ -90,6 +90,8 @@ img {
 
 .list-styles-reset {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .main-navigation a,
@@ -293,6 +295,10 @@ input::placeholder {
   background-color: #293449;
 }
 
+.main-navigation li {
+  flex-grow: 1;
+}
+
 .main-navigation a {
   font-size: 17px;
   line-height: 1;
@@ -483,7 +489,7 @@ input::placeholder {
   padding: 0;
   margin: 0;
   border: none;
-  border-bottom: 1px solid #000000; /* !!!!!!!!!! */
+  border-bottom: 1px solid #e5e5e5; /* !!!!!!!!!! */
 }
 
 .brand-filter label,
@@ -622,8 +628,8 @@ input::placeholder {
   z-index: 10;
 }
 
-.catalog-product .product-action .buy,
-.catalog-product .product-action .bookmark {
+.product-action .buy,
+.product-action .bookmark {
   display: block;
   width: 129px;
   margin: 0 auto;
@@ -649,17 +655,7 @@ input::placeholder {
   display: block;
 }
 
-/*
-.product-action .buy {
-  padding: 14px 45px 14px 49px;
-  border-radius: 3px;
-  color: #ffffff;
-  background-color: #63a63e;
-  box-shadow: 0px 3px 0px 0px #518534;
-}
-*/
-
-.catalog-product .product-action .bookmark {
+.product-action .bookmark {
   color: #32425c;
   background-color: #ffffff;
   border-bottom-color: #63a63e;
