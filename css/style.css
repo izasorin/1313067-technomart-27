@@ -103,6 +103,34 @@ img {
   display: none;
 }
 
+.red-button {
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.red-button:hover {
+  background-color: #ca2c37;
+}
+
+.red-button:focus {
+  background-color: #ba2732;
+}
+
+.white-button {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #e5e5e5;
+}
+
+.white-button:hover {
+  border-color: #bdc6ca;
+}
+
+.white-button:focus {
+  border-color: #ee3643;
+}
+
+
 .page-header {
   background-color: #f4f7f9;
 }
@@ -189,7 +217,7 @@ img {
   width: 14px;
   height: 16px;
   position: absolute;
-  background: url("/img/svg/bookmark-icon.svg") no-repeat;
+  background: url("/img/svg/bookmark-icon.svg");
   left: 10px;
   opacity: 0.3;
 }
@@ -199,7 +227,7 @@ img {
   width: 14px;
   height: 16px;
   position: absolute;
-  background: url("/img/svg/cart-icon.svg") no-repeat;
+  background: url("/img/svg/cart-icon.svg");
   left: 10px;
   opacity: 0.3;
 }
@@ -555,44 +583,53 @@ input::placeholder {
   opacity: 0.3;
 }
 
-.delivery-slider {
-  background-image: url("/img/service-delivery.png");
-  background-size: 468px;
-  background-position: right 0 bottom 0;
+.services-slider-list {
+  position: relative;
 }
 
-/*
-.tabbed-slider__content {
-  display: none;
-  width: 620px;
-  min-height: 331px;
-  padding: 44px 248px 40px 0;
-  background-repeat: no-repeat;
+.services-slider-list::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 279px;
+  bottom: 0;
+  right: 0;
+  background: url("/img/shadow-line.png") no-repeat;
 }
 
-
-.tabbed-slider__content--delivery {
-  background-image: url("../img/services-delivery.png");
-  background-size: 468px;
-  background-position: right 0 bottom 0;
+.slider-content {
+  position: relative;
 }
 
-
-.delivery-slider {
-  width: 600px;
-  height: 150px;
-  background: url("/img/service-delivery.png") no-repeat;
-  background-position: 130px 0px;
+.delivery-slider::after {
+  content: "";
+  position: absolute;
+  width: 468px;
+  height: 261px;
+  bottom: 0;
+  left: 210px;
+  background: url("/img/service-delivery.png");
 }
 
-.warranty-text::after {
-  background: url("/img/service-warranty.png") no-repeat #f4f7f9;
+.warranty-slider::after {
+  content: "";
+  position: absolute;
+  width: 468px;
+  height: 261px;
+  bottom: 0;
+  left: 210px;
+  background: url("/img/service-warranty.png");
 }
 
-.credit-text::after {
-  background: url("/img/service-credit.png") no-repeat #f4f7f9;
+.credit-slider::after {
+  content: "";
+  position: absolute;
+  width: 468px;
+  height: 261px;
+  bottom: 0;
+  left: 210px;
+  background: url("/img/service-credit.png");
 }
-*/
 
 /*---- стили catalog ----*/
 
@@ -672,6 +709,7 @@ input::placeholder {
   color: #000000;
   background: #ffffff;
   border: 1px solid #e5e5e5;
+  cursor: pointer;
 }
 
 .sorting-by-price,
@@ -785,6 +823,7 @@ input::placeholder {
 .product-action .bookmark {
   display: block;
   width: 129px;
+  position: relative;
   margin: 0 auto;
   margin-bottom: 7px;
   padding: 7px 0;
@@ -798,6 +837,16 @@ input::placeholder {
   line-height: 1.28;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.product-action .buy::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px; 
+  left: 10px;
+  background: url("/img/svg/cart-icon.svg");
+  opacity: 0.3;
 }
 
 .catalog-product .product-action {
@@ -901,6 +950,7 @@ input::placeholder {
   background-color: #ee3643;
 }
 
+
 .contacts-company h2 {
   margin-bottom: 38px;
   font-size: 30px;
@@ -1000,6 +1050,41 @@ input::placeholder {
   color: #ee3643;
 }
 
+/* ----- стили  modal ----- */
+
+.modal-map {
+  position: relative;
+  width: 940px;
+  height: 446px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.75);;
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+}
+
+.modal-map-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;  
+}
+
+.modal-close {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  background: url(/img/svg/close-icon.svg) no-repeat;
+  cursor: pointer;
+  border: none;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+
 /* ----- Сеточные стили ----- */
 
 html,
@@ -1011,6 +1096,7 @@ body {
   width: 940px;
   margin: 0 auto;
 }
+
 
 /* ----- Сеточные стили header ----- */
 
@@ -1128,6 +1214,15 @@ body {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 2px;
 }
+
+.category-item a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.category-item a:focus {
+  background: rgba(0, 0, 0, 0.3);
+}
+
 
 .category-slider h3 {
   margin: 27px 0 0 25px;
@@ -1376,7 +1471,7 @@ body {
   margin: 38px 0 0 0;
 }
 
-.info-delviery p {
+.info-delivery p {
   margin: 32px 0 0 0;
 }
 
@@ -1384,12 +1479,24 @@ body {
   margin: 36px 0 40px 0;
 }
 
-.info-delviery ul {
+.info-delivery ul {
   margin-bottom: 37px;
 }
 
-.info-delviery li {
+.delivery-list li {
+  position: relative;
   margin-top: 22px;
+  padding-left: 37px;
+}
+
+.delivery-list li::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0px;
+  width: 25px;
+  height: 2px;
+  background-color: #ee3643;
 }
 
 .contacts-company a {
@@ -1424,6 +1531,7 @@ body {
 }
 
 /* Временно для удобсвта */
+
 .price-filter fieldset {
   display: flex;
   flex-direction: column;
@@ -1532,6 +1640,14 @@ body {
   height: 34px;
 }
 
+.pagination-list a:hover {
+  border: 1px solid #bdc6ca;
+}
+
+.pagination-list a:focus {
+  border: 1px solid #ee3643;
+}
+
 .about-content-wrapper {
   width: 100%;
   padding: 0;
@@ -1589,22 +1705,37 @@ body {
   align-items: center;
 }
 
-.footer-social {
+.footer-social ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 135px;
+  margin: 0 auto;
+  padding: 0;
 }
 
-.footer-social li {
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 42px;
   height: 42px;
+  background-color: #212a3a;
+  border-radius: 50%;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #ee3643;
 }
 
 .footer-links {
   display: flex;
-  margin-left: auto;
+  margin-left: 119px;
 }
 
 .footer-copywrite {
-  margin-right: auto;
+  margin-right: 161px;
 }
 
 .footer-feedback {
