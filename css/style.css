@@ -399,6 +399,7 @@ img {
   height: 45px;
   font-size: 0;
   border: 0;
+  outline:none;
   cursor: pointer;
 }
 
@@ -416,8 +417,9 @@ img {
 
 .logout svg:focus {
   opacity: 0.3;
-  
-} /* Нужно разобраться с выделением кнопки */
+} 
+
+/* Нужно разобраться с выделением кнопки ~ outline:none; не решает проблему */
 
 
 .user-name::before {
@@ -604,7 +606,6 @@ img {
 
 /* Нужно разобраться с кнопками переключения*/
 
-
 .slider .previous-slider {
   position: absolute;
   top: 114px;
@@ -636,7 +637,6 @@ img {
 .next-slider{
   background: url("/img/svg/icon-right.svg") no-repeat 0px 0px;
 }
-
 
 .technics {
   margin-bottom: 20px;
@@ -1330,38 +1330,235 @@ img {
 
 /* ----- стили  modal ----- */
 
+.modal {
+  position: fixed;
+  color: #000000;
+  background-color: #ffffff;
+  z-index: 99999;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 21px;
+  height: 21px;
+  background: url("/img/svg/close-icon.svg") no-repeat;
+  text-indent: -1000px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  z-index: 30;
+  outline: none;
+}
+
+/* Стили для модального окна feedback*/
+
+.modal-feedback {
+  display: none;
+  bottom: 50%;
+  left: 50%;
+  width: 620px;
+  min-height: 423px;
+  margin-bottom: -215px;
+  margin-left: -310px;
+  border-top: 7px solid #ee3643;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 460px;
+  height: 318px;
+  padding: 48px 80px 0 80px;
+  border: none;
+}
+
+.feedback-user-info {
+  display: flex;
+  justify-content: space-between;
+  resize: none;
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 13px;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  color: #000000;
+}
+
+.feedback-user-info input {
+  box-sizing: border-box;
+  width: 220px;
+  height: 38px;
+  padding-left: 16px;
+  font-family: "PT-Sans-Regular", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.38;
+  color: #a9a9a9;
+  border: 2px solid #dee3e4;
+  border-radius: 3px;
+  outline: none;
+}
+
+.feedback-text {
+  margin-top: 22px;
+}
+
+.feedback-text textarea {
+  box-sizing: border-box;
+  width: 460px;
+  height: 114px;
+  padding-top: 13px;
+  padding-left: 16px;
+  font-family: "PT-Sans-Regular", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.38;
+  color: #a9a9a9;
+  border: 2px solid #dee3e4;
+  border-radius: 3px;
+  resize: none;
+  outline: none;
+}
+
+.feedback-user-info input::placeholder,
+.feedback-text textarea::placeholder {
+  font-family: "PT-Sans-Regular", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.38;
+  color: #a9a9a9;
+}
+
+.feedback-user-info input:hover,
+.feedback-text textarea:hover {
+  border-color: #b5b5b5;
+}
+
+.feedback-user-info input:focus,
+.feedback-text textarea:focus {
+  border-color: #ee3643;
+}
+
+.feedback-button { 
+  width: 460px;
+  height: 38px;
+  font-size: 14px;
+  line-height: 1.28;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.feedback-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 620px;
+  height: 112px;
+  background-color: #f4f4f4;
+}
+
+/* Стили для модального окна Карта */
+
 .modal-map {
-  position: relative;
+  display: none;
+  bottom: 50%;
+  left: 50%;
   width: 940px;
   height: 446px;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.75);;
+  margin-bottom: -223px;
+  margin-left: -470px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
 }
 
 .modal-map iframe {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .modal-map-img {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1;  
 }
 
-.modal-close {
-  position: absolute;
-  width: 21px;
-  height: 21px;
-  top: 10px;
-  right: 10px;
-  z-index: 3;
-  background: url("/img/svg/close-icon.svg") no-repeat;
-  cursor: pointer;
-  border: none;
-  text-indent: -1000px;
-  overflow: hidden;
+/* Стили для модального окна "Товар добавлен в корзину" */
+
+.modal-purchase {
+  display: none;
+  bottom: 50%;
+  left: 50%;
+  width: 620px;
+  height: 275px;
+  margin-left: -310px;
+  margin-bottom: -141px;
+  border-top: 7px solid #ee3643;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
+
+.purchase-title p {
+  position: relative;
+  margin: 0;
+  padding: 68px 0 68px 179px;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.purchase-title p::after {
+  content: "";
+  position: absolute;
+  top: 48px;
+  left: 81px;
+  width: 66px;
+  height: 66px;
+  background-image: url("/img/svg/modal-purchase.svg");
+}
+
+.purchase-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 620px;
+  height: 112px;
+  background-color: #f4f4f4;
+}
+
+.purchase-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 38px;
+  font-size: 14px;
+  line-height: 1.28;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.purchase-button-wrapper .red-button {
+  margin-right: 20px;
+}
+
+/* В стайлгеайде не нашел примеров взаимодействия с такой кнопкой. Нужно ли самому додумывать ? */
+.purchase-button-wrapper .white-button:hover {
+  border: 1px solid #bdc6ca;
+}
+
+.purchase-button-wrapper .white-button:focus {
+  border: 1px solid #ee3643;
+}
+
+
 
 /* ----- Сеточные стили ----- */
 
@@ -1601,18 +1798,6 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
-/*
-.category-slider {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  margin-top: 20px;
-  width: 620px;
-  height: 266px;
-}
-*/
 
 .category-rigth-part {
   display: flex;
@@ -1906,6 +2091,7 @@ body {
 }
 
 /* Нужно разобраться */
+
 .price-controls {
   font-size: 0;
   margin-bottom: 25px;

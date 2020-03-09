@@ -452,26 +452,45 @@
         </div>
       </div>
     </footer>
+
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <fieldset>
-          <div>
-            <label for="user-name">Ваше имя:</label>
-            <input id="user-name" type="text" placeholder="Имя Фамилия">
+        <fieldset class="feedback-form">
+          <div class="feedback-user-info">
+            <div>
+              <label for="user-name">Ваше имя:</label>
+              <input id="user-name" type="text" placeholder="Имя Фамилия">
+            </div>
+            <div>
+              <label for="user-email">Ваш e-mail:</label>
+              <input id="user-email" type="email" placeholder="email@example.com">
+            </div>
           </div>
-          <div>
-            <label for="user-email">Ваш e-mail:</label>
-            <input id="user-email" type="email" placeholder="email@example.com">
-          </div>
-          <div>
+          <div class="feedback-text">
             <label for="feedback">Текст письма:</label>
-            <input id="feedback" type="text" placeholder="В свободной форме">
+            <textarea id="feedback" placeholder="В свободной форме"></textarea>
           </div>
-          <button type="submit">Отправить</button>
         </fieldset>
+        <div class="feedback-button-wrapper">
+          <button class="feedback-button red-button" type="submit">Отправить</button>
+        </div>
       </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
+
+    <section class="modal modal-purchase">
+      <h2 class="visually-hidden">Товар добавлен в корзину!</h2>
+      <div class="purchase-title">
+        <p>Товар добавлен в корзину!</p>
+      </div>
+      <div class="purchase-button-wrapper">
+        <a class="purchase-button red-button" href="#">Оформить заказ</a>
+        <button class="purchase-button white-button" type="button">Продолжить покупки</button>
+      </div>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
+
     <section class="modal modal-map">
       <h2 class="visually-hidden">Карта</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494.920375273981!2d30.31684684663201!3d59.93868553976461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1583519815695!5m2!1sru!2sru" width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -480,5 +499,6 @@
         </div>
         <button class="modal-close" type="button">Закрыть</button>
     </section>
+
   </body>
 </html>
