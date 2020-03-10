@@ -17,7 +17,7 @@
           <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
             <label for="search">
               <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-                <path fill="#231F20" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
+                <path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
               </svg>
             </label>
             <input type="text" id="search" name="search" placeholder="Поиск:" />
@@ -93,14 +93,41 @@
             <div class="category-item material new">
               <div class="flag-new">New</div>
               <h3>Материалы</h3>
-              <!-- background-image -->
               <a href="#">На любой вкус</a>
             </div>
             <div class="category-item tools">
               <h3>Инструменты</h3>
-              <!-- background-image -->
               <a href="#">На все случаи</a>
             </div>
+            <input class="visually-hidden" type="radio" name="toggle" id="slider-1">
+            <input class="visually-hidden" type="radio" name="toggle" id="slider-2" checked>
+            <section class="slider">
+              <div id="active" class="slider-radio">
+                <label for="slider-1">Первый</label>
+                <label for="slider-2">Второй</label>
+              </div>
+              <div id="controls" class="slider-controls">
+                <label class="previous-slider" for="slider-1">Назад</label>
+                <label class="next-slider" for="slider-2">Вперед</label>
+              </div>
+              <ul class="slider-list list-styles-reset">
+                <li class="slider-item slide" id="slide1">
+                  <h3 class="slide-title">
+                    Перфораторы
+                  </h3>
+                  <p class="slide-info">Настоящие мужские игрушки</p>
+                  <a class="slide-button red-button" href="#">Открыть каталог</a>
+                </li>
+                <li class="slider-item slide" id="slide2">
+                  <h3 class="slide-title">
+                    Дрели
+                  </h3>
+                  <p class="slide-info">Соседям на радость!</p>
+                  <a class="slide-button red-button" href="#">Открыть каталог</a>
+                </li>
+              </ul>
+            </section>
+            <!--
             <div class="instrument category-slider">
               <div>
                 <h3>Дрели</h3>
@@ -112,21 +139,19 @@
               </div>
               <a class="category-slider-buttom red-button" href="catalog.html">Открыть каталог</a>
             </div>
+            -->
           </div>
           <div class="category-rigth-part">
             <div class="category-item technics">
               <h3>Техника</h3>
-              <!-- background-image -->
               <a href="#">Для стройки</a>
             </div>
             <div class="category-item discount">
               <h3>Скидки 50%</h3>
-              <!-- background-image -->
               <a href="#">На 350 товаров</a>
             </div>
             <div class="category-item delivery">
               <h3>Доставка</h3>
-              <!-- background-image -->
               <a href="#">Бесплатно</a>
             </div>
           </div>
@@ -333,47 +358,51 @@
     </main>
     <!-- Здесь фтуер макета -->
     <footer>
-      <div class="footer-contacts-wrapper">
-        <div class="footer-contacts container">
-          <h2 class="visually-hidden">Контактная информация</h2>
-          <a class="footer-logo">
-            <img src="img/svg/logo-footer.svg" width="138" height="23" alt="Логотип магазина Техномарт"/>
-          </a>
-          <p class="address">
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br />
-            <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-          </p>
-          <ul class="footer-navigation list-styles-reset">
-            <li>
-              <a href="">Компания</a>
-            </li>
-            <li>
-              <a href="#">Новости</a>
-            </li>
-            <li>
-              <a href="catalog.html">Каталог</a>
-            </li>
-            <li>
-              <a href="#">Доставка</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-          <ul class="footer-category list-styles-reset">
-            <li>
-              <a href="#">Материалы</a>
-            </li>
-            <li>
-              <a href="#">Техника</a>
-            </li>
-            <li>
-              <a href="#">Инструмент</a>
-            </li>
-            <li>
-              <a href="#">Спецпредложения</a>
-            </li>
-          </ul>
+      <div class="footer-info-wrapper">
+        <div class="footer-info container">
+          <div class="footer-contacts">
+            <h2 class="visually-hidden">Контактная информация</h2>
+            <a class="footer-logo" href="index.html">
+              <img src="img/svg/logo-footer.svg" width="138" height="23" alt="Логотип магазина Техномарт"/>
+            </a>
+            <p class="footer-address">
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br />
+              <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+            </p>
+          </div>
+          <div class="footer-menu">
+            <ul class="footer-navigation list-styles-reset">
+              <li>
+                <a href="">Компания</a>
+              </li>
+              <li>
+                <a href="#">Новости</a>
+              </li>
+              <li>
+                <a href="catalog.html">Каталог</a>
+              </li>
+              <li>
+                <a href="#">Доставка</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <ul class="footer-category list-styles-reset">
+              <li>
+                <a href="#">Материалы</a>
+              </li>
+              <li>
+                <a href="#">Техника</a>
+              </li>
+              <li>
+                <a href="#">Инструмент</a>
+              </li>
+              <li>
+                <a href="#">Спецпредложения</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="footer-about-wrapper">
@@ -423,26 +452,45 @@
         </div>
       </div>
     </footer>
+
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <fieldset>
-          <div>
-            <label for="user-name">Ваше имя:</label>
-            <input id="user-name" type="text" placeholder="Имя Фамилия">
+        <fieldset class="feedback-form">
+          <div class="feedback-user-info">
+            <div>
+              <label for="user-name">Ваше имя:</label>
+              <input id="user-name" type="text" placeholder="Имя Фамилия">
+            </div>
+            <div>
+              <label for="user-email">Ваш e-mail:</label>
+              <input id="user-email" type="email" placeholder="email@example.com">
+            </div>
           </div>
-          <div>
-            <label for="user-email">Ваш e-mail:</label>
-            <input id="user-email" type="email" placeholder="email@example.com">
-          </div>
-          <div>
+          <div class="feedback-text">
             <label for="feedback">Текст письма:</label>
-            <input id="feedback" type="text" placeholder="В свободной форме">
+            <textarea id="feedback" placeholder="В свободной форме"></textarea>
           </div>
-          <button type="submit">Отправить</button>
         </fieldset>
+        <div class="feedback-button-wrapper">
+          <button class="feedback-button red-button" type="submit">Отправить</button>
+        </div>
       </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
+
+    <section class="modal modal-purchase">
+      <h2 class="visually-hidden">Товар добавлен в корзину!</h2>
+      <div class="purchase-title">
+        <p>Товар добавлен в корзину!</p>
+      </div>
+      <div class="purchase-button-wrapper">
+        <a class="purchase-button red-button" href="#">Оформить заказ</a>
+        <button class="purchase-button white-button" type="button">Продолжить покупки</button>
+      </div>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
+
     <section class="modal modal-map">
       <h2 class="visually-hidden">Карта</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494.920375273981!2d30.31684684663201!3d59.93868553976461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1583519815695!5m2!1sru!2sru" width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -451,5 +499,6 @@
         </div>
         <button class="modal-close" type="button">Закрыть</button>
     </section>
+
   </body>
 </html>
