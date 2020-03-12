@@ -35,10 +35,9 @@
         </p>
         <div class="header-contacts">
           <a class="head-phone" href="tel:+78125550555">
-            <!--
             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
               <path fill="#B7BFC8" d="M15.572 18.985h-.941c-4.129-.488-7.157-2.408-9.359-4.864C3.062 11.66 1.318 8.492.978 4.228V3.084c.078-.774.459-1.304.898-1.757C2.425.766 3.25.044 4.002.019c.554-.018 1.5.38 1.879.899.329.446.504 1.339.656 2.003.154.671.505 1.643.408 2.289-.148 1.007-1.487 1.434-1.879 2.166 1.307 3.135 3.443 5.439 6.293 7.031.715-.392 1.346-1.572 2.332-1.595.359-.009.818.178 1.184.286.402.121.75.275 1.104.408.596.224 1.648.521 2.004 1.021.365.513.57 1.356.49 1.879-.164 1.041-1.879 2.197-2.901 2.579z" />
-            </svg>  -->
+            </svg> 
             +7 (812) 555-05-55
           </a>
           <p class="head-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -103,8 +102,8 @@
             <input class="visually-hidden" type="radio" name="toggle" id="slider-2" checked>
             <section class="slider">
               <div id="active" class="slider-radio">
-                <label for="slider-1">Первый</label>
-                <label for="slider-2">Второй</label>
+                <label class="radio-fist-slider" for="slider-1">Первый</label>
+                <label class="radio-second-slider" for="slider-2">Второй</label>
               </div>
               <div id="controls" class="slider-controls">
                 <label class="previous-slider" for="slider-1">Назад</label>
@@ -127,19 +126,6 @@
                 </li>
               </ul>
             </section>
-            <!--
-            <div class="instrument category-slider">
-              <div>
-                <h3>Дрели</h3>
-                <p>Соседям на радость!</p>
-              </div>
-              <div class="slider-control">
-                <label class="slider-control-previous" for="#">Назад</label>
-                <label class="slider-control-next" for="#">Вперед</label>
-              </div>
-              <a class="category-slider-buttom red-button" href="catalog.html">Открыть каталог</a>
-            </div>
-            -->
           </div>
           <div class="category-rigth-part">
             <div class="category-item technics">
@@ -265,58 +251,55 @@
             </ul>
           </div>
         </section>
-      </div>
+      </div>   
       <div class="services-wrapper">
         <section class="services container">
           <div class="services-info">
             <h2 class="services-title">Сервисы</h2>
-          <p class="services-text text">
-            Хороший интернет-магазин отличается от плохого не только ценами!<br />
-            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-          </p>
+            <p class="services-text text">
+              Хороший интернет-магазин отличается от плохого не только ценами!<br />
+              Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+            </p>
           </div>
+          <input class="visually-hidden" type="radio" name="switch" id="services-slider-1" checked>
+          <input class="visually-hidden" type="radio" name="switch" id="services-slider-2" >
+          <input class="visually-hidden" type="radio" name="switch" id="services-slider-3">
           <div class="services-slider">
-            <div class="services-slider-list">
-              <form action="https://echo.htmlacademy.ru" method="get">
-                <div class="services-item">
-                  <input type="radio" name="service" id="buttom-delivery" checked />
-                  <label for="buttom-delivery">Доставка</label>
-                </div>
-                <div class="services-item">
-                  <input type="radio" name="service" id="buttom-warranty" />
-                  <label for="buttom-warranty">Гарантия</label>
-                </div>
-                <div class="services-item">
-                  <input type="radio" name="service" id="buttom-credit" />
-                  <label for="buttom-credit">Кредит</label>
-                </div>
-              </form>
+            <div class="services-radio" id="services-controls">
+              <label class="delivery-slider" for="services-slider-1">Доставка</label>
+              <label class="warranty-slider" for="services-slider-2">Гарантия</label>
+              <label class="credit-slider" for="services-slider-3">Кредит</label>
             </div>
-            <div class="slider-content delivery-slider"><!-- HiFull тут будет слайдер, поэтому потом переверстаем. пока забей-->
-              <h3 class="delivery-title">Доставка</h3>
-              <p class="delivery-text">
-                Мы с удовольствием доставим ваш товар прямо<br />к вашему подъезду
-                совершенно бесплатно!<br />
-                Ведь мы неплохо заработаем,<br />поднимая его на ваш этаж!
-              </p>
-            </div>
-            <div class="slider-content warranty-slider visually-hidden"><!-- Скрыл для удобства-->
-              <h3 class="warranty-title">Гарантия</h3>
-              <p class="warranty-text">
-                Мы с удовольствием доставим ваш товар прямо<br />к вашему подъезду
-                совершенно бесплатно!<br />
-                Ведь мы неплохо заработаем,<br />поднимая его на ваш этаж!
-              </p>
-            </div>
-            <div class="slider-content credit-slider  visually-hidden"><!-- Скрыл для удобства-->
-              <h3 class="credit-title">Кредит</h3>
-              <p class="credit-text">
-                Залезть в долговую яму стало проще!<br />
-                Кредитные консультанты придут вам на помощь.
-              </p>
-              <a class="credit-button red-bootom" href="#">Отправить заявку</a>
-            </div>
-          </div>
+            <ul class="services-list list-styles-reset">
+              <li class="services-slider-item delivery-item" id="services1">
+                <h3 class="services-slider-title">Доставка</h3>
+                <p class="services-slider-text">
+                  Мы с удовольствием доставим ваш товар прямо<br />
+                  к вашему подъезду совершенно бесплатно!
+                  Ведь мы неплохо заработаем,<br />
+                  поднимая его на ваш этаж!
+                </p>
+              </li>
+              <li class="services-slider-item warranty-item" id="services2">
+                <h3 class="services-slider-title">Гарантия</h3>
+                <p class="services-slider-text">
+                  Если купленный у нас товар поломается или заискрит,<br />
+                  а также в случае пожара, спровоцированного его возгоранием,
+                  вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+                  сгоревший товар на новый.<br />
+                  Дом уж восстановите как-нибудь сами.
+                </p>
+              </li>
+              <li class="services-slider-item credit-item" id="services3">
+                <h3 class="services-slider-title">Кредит</h3>
+                <p class="services-slider-text">
+                  Залезть в долговую яму стало проще!<br />
+                  Кредитные консультанты придут вам на помощь.
+                </p>
+                <a class="services-slider-button red-button" href="#">Отправить заявку</a>
+              </li>
+            </ul>            
+          </div> 
         </section>
       </div>
         <div class="container">
@@ -324,14 +307,12 @@
             <section class="about-company">
               <h2>Компания «Техномарт»</h2>
               <p>
-                Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
-                ремонта<br />
-                и строительства не оставит равнодушными любителей сэкономить на
-                гастарбайтерах.
+                Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта
+                и&nbsp;строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
               </p>
               <div class="info-delivery">
                 <p>
-                  Мы можем доставить ваш товар в самые отдаленные точки России!<br />
+                  Мы можем доставить ваш товар в самые отдаленные точки России!
                   Техномарт работает со многими транспортными компаниями:
                 </p>
                 <ul class="delivery-list list-styles-reset">
@@ -345,7 +326,7 @@
             <section class="contacts-company">
               <h2>Контакты</h2>
               <p>
-                Вы можете забрать товар сами,<br />
+                Вы можете забрать товар сами,
                 заехав в наш офис:
               </p>
               <div class="map-mini">
@@ -452,7 +433,6 @@
         </div>
       </div>
     </footer>
-
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
@@ -478,7 +458,6 @@
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
-
     <section class="modal modal-purchase">
       <h2 class="visually-hidden">Товар добавлен в корзину!</h2>
       <div class="purchase-title">
@@ -490,15 +469,13 @@
       </div>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
-
     <section class="modal modal-map">
       <h2 class="visually-hidden">Карта</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494.920375273981!2d30.31684684663201!3d59.93868553976461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1583519815695!5m2!1sru!2sru" width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494.920375273981!2d30.31684684663201!3d59.93868553976461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1583519815695!5m2!1sru!2sru" width="940" height="446" style="border:0;" allowfullscreen=""></iframe>
         <div class="modal-map-img">
           <img src="img/map-big.jpg" width="940" height="446" alt="Схема проезда до магазина по адресу Большая Конюшенная, дом 19/8">
         </div>
         <button class="modal-close" type="button">Закрыть</button>
     </section>
-
   </body>
 </html>

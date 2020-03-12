@@ -99,10 +99,6 @@ img {
   color: #ffffff;
 }
 
-.modal {
-  display: none;
-}
-
 .red-button {
   color: #ffffff;
   background-color: #ee3643;
@@ -112,7 +108,7 @@ img {
   background-color: #ca2c37;
 }
 
-.red-button:focus {
+.red-button:active {
   background-color: #ba2732;
 }
 
@@ -126,10 +122,9 @@ img {
   border-color: #bdc6ca;
 }
 
-.white-button:focus {
+.white-button:active {
   border-color: #ee3643;
 }
-
 
 .page-header {
   background-color: #f4f7f9;
@@ -156,11 +151,11 @@ img {
   box-shadow: 0px 5px 0px 0px #9c2d36;
 }
 
-.head-logo:hover img{
+.head-logo:hover img {
   background-color: #ca2c37;
 }
 
-.head-logo:focus img{
+.head-logo:active img {
   background-color: #ba2732;
 }
 
@@ -179,7 +174,7 @@ img {
   background-color: #5fbb2d;
 }
 
-.head-navigation .place-order:focus {
+.head-navigation .place-order:active {
   color: rgba(255, 255, 255, 0.5);
   background-color: #518534;
 }
@@ -199,14 +194,14 @@ img {
   background-color: #212a3a;
 }
 
-.head-navigation .bookmarks:focus,
-.head-navigation .cart:focus {
+.head-navigation .bookmarks:active,
+.head-navigation .cart:active {
   color: rgba(255, 255, 255, 0.6);
   background-color: #161d29;
 }
 
 .head-navigation .full-cart,
-.head-navigation .full-cart:focus,
+.head-navigation .full-cart:active,
 .head-navigation .full-cart:hover {
   color: #ffffff;
   background-color: #ee3643;
@@ -217,7 +212,7 @@ img {
   width: 14px;
   height: 16px;
   position: absolute;
-  background: url("/img/svg/bookmark-icon.svg");
+  background: url("../img/svg/bookmark-icon.svg");
   left: 10px;
   opacity: 0.3;
 }
@@ -227,7 +222,7 @@ img {
   width: 14px;
   height: 16px;
   position: absolute;
-  background: url("/img/svg/cart-icon.svg") no-repeat;
+  background: url("../img/svg/cart-icon.svg") no-repeat;
   left: 10px;
   opacity: 0.3;
 }
@@ -237,27 +232,25 @@ img {
   opacity: 1;
 }
 
-.bookmarks:focus::before,
-.cart:focus::before {
+.bookmarks:active::before,
+.cart:active::before {
   opacity: 0.5;
 }
 
 .header-search {
   position: relative;
-
 }
 
 .header-search input,
 .header-search button {
   border: none;
-  outline: none;
 }
 
 .header-search input {
   width: 220px;
   height: 40px;
-  margin-left: 49px;
-  padding-left: 0;
+
+  padding-left: 49px;
   font-size: 17px;
   line-height: 1.05;
   color: #ffffff;
@@ -287,15 +280,16 @@ img {
   opacity: 1;
 }
 
-.header-search input:active,
-.header-search:active {
+.header-search input:focus {
   color: #000000;
   background-color: #ffffff;
 }
-/* Разобраться */
-.header-search:active path {
+
+.header-search input:focus + .search-icon path {
   fill: #ee3643;
 }
+
+/* Разобраться */
 
 .user-navigation p:first-of-type {
   font-family: "Cuprum-Italic", Arial, sans-serif;
@@ -313,7 +307,7 @@ img {
 
 .header-contacts a:first-of-type {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 270px;
   height: 39px;
@@ -324,13 +318,9 @@ img {
   border: 3px solid white;
 }
 
-.head-phone::before {
-  content: "";
-  width: 19px;
-  height: 19px;
-  position: absolute;
-  background: url("/img/svg/phone-icon.svg") no-repeat;
-  left: 15px;
+.head-phone svg {
+  padding-left: 15px;
+  padding-right: 40px;
 }
 
 .log-out a {
@@ -341,12 +331,17 @@ img {
 
 .log-out .login-button {
   display: flex;
-  justify-content: space-evenly; /* Нужно разобраться */
+  justify-content: flex-start;
   align-items: center;
   width: 121px;
   height: 45px;
   margin-right: 5px;
   background-color: #ffffff;
+}
+
+.login-button svg {
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .login-button path {
@@ -367,7 +362,7 @@ img {
   color: #ee3643;
 }
 
-.log-out li a:focus {
+.log-out li a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -375,7 +370,7 @@ img {
   fill: #32425c;
 }
 
-.log-out .login-button:focus path {
+.log-out .login-button:active path {
   fill: #c5c5c5;
 }
 
@@ -399,7 +394,6 @@ img {
   height: 45px;
   font-size: 0;
   border: 0;
-  outline:none;
   cursor: pointer;
 }
 
@@ -415,12 +409,9 @@ img {
   opacity: 1;
 }
 
-.logout svg:focus {
+.logout svg:active {
   opacity: 0.3;
-} 
-
-/* Нужно разобраться с выделением кнопки ~ outline:none; не решает проблему */
-
+}
 
 .user-name::before {
   content: "";
@@ -428,11 +419,11 @@ img {
   width: 20px;
   height: 18px;
   left: 10px;
-  background: url("/img/svg/user-icon.svg");
+  background: url("../img/svg/user-icon.svg");
   opacity: 0.3;
 }
 
-.user-name:focus {
+.user-name:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -441,8 +432,8 @@ img {
   opacity: 1;
 }
 
-.user-name:focus::before,
-.user-name:focus::after {
+.user-name:active::before,
+.user-name:active::after {
   opacity: 0.3;
 }
 
@@ -461,8 +452,8 @@ img {
   color: #ee3643;
 }
 
-.log-in li:nth-child(3) a:focus,
-.log-in li:nth-child(4) a:focus {
+.log-in li:nth-child(3) a:active,
+.log-in li:nth-child(4) a:active {
   color: rgba(55, 66, 92, 0.3);
 }
 
@@ -496,7 +487,7 @@ img {
   background-color: #293449;
 }
 
-.main-navigation a:focus {
+.main-navigation a:active {
   color: rgba(255, 255, 255, 0.5);
   background-color: #161d29;
 }
@@ -505,17 +496,16 @@ img {
 
 .material {
   margin-right: 20px;
-  background: #ffbf47 url("/img/category-materials.png") no-repeat 213px 30px;
+  background: #ffbf47 url("../img/category-materials.png") no-repeat 213px 30px;
 }
 
 .tools {
-  background: #3bbce3 url("/img/category-instrument.png") no-repeat 191px 30px;
+  background: #3bbce3 url("../img/category-instrument.png") no-repeat 191px 30px;
 }
 
 .instrument {
-  background-image: url("/img/slider-image-1.jpg");
+  background-image: url("../img/slider-image-1.jpg");
 }
-
 
 .slider {
   display: flex;
@@ -525,7 +515,6 @@ img {
   margin-top: 20px;
   width: 620px;
   height: 266px;
-  transition: background-image 0.5s ease, background-color 0.3s ease;
 }
 
 .slide-button {
@@ -586,8 +575,8 @@ img {
   display: block;
 }
 
-#slider-1:checked ~ .slider label:nth-child(1),
-#slider-2:checked ~ .slider label:nth-child(2) {
+#slider-1:checked ~ .slider .radio-fist-slider,
+#slider-2:checked ~ .slider .radio-second-slider {
   width: 7px;
   height: 7px;
   background-color: #ee3643;
@@ -596,15 +585,13 @@ img {
 
 #slider-2:checked ~ .slider {
   background-color: #857a6d;
-  background-image: url("/img/slider-image-1.jpg");
+  background-image: url("../img/slider-image-1.jpg");
 }
 
 #slider-1:checked ~ .slider {
   background-color: #857a6d;
-  background-image: url("/img/slider-image-2.jpg");
+  background-image: url("../img/slider-image-2.jpg");
 }
-
-/* Нужно разобраться с кнопками переключения*/
 
 .slider .previous-slider {
   position: absolute;
@@ -619,7 +606,7 @@ img {
 }
 
 .previous-slider {
-  background: url("/img/svg/icon-left.svg") no-repeat 0px 0px;
+  background: url("../img/svg/icon-left.svg") no-repeat 0px 0px;
 }
 
 .slider .next-slider {
@@ -634,22 +621,22 @@ img {
   cursor: pointer;
 }
 
-.next-slider{
-  background: url("/img/svg/icon-right.svg") no-repeat 0px 0px;
+.next-slider {
+  background: url("../img/svg/icon-right.svg") no-repeat 0px 0px;
 }
 
 .technics {
   margin-bottom: 20px;
-  background: #dc91d8 url("/img/category-technics.png") no-repeat 191px 30px;
+  background: #dc91d8 url("../img/category-technics.png") no-repeat 191px 30px;
 }
 
 .discount {
   margin-bottom: 20px;
-  background: #8ed78f url("/img/category-sale.png") no-repeat 196px 25px;
+  background: #8ed78f url("../img/category-sale.png") no-repeat 196px 25px;
 }
 
 .delivery {
-  background: #ffc047 url("/img/category-delivery.png") no-repeat 191px 30px;
+  background: #ffc047 url("../img/category-delivery.png") no-repeat 191px 30px;
   background-color: #ffc047;
 }
 
@@ -669,9 +656,13 @@ img {
 }
 
 .popular-goods-title a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto 0;
   margin-right: 25px;
-  padding: 14px 55px 14px 55px;
+  width: 253px;
+  height: 38px;
   font-size: 14px;
   line-height: 1.28;
   text-transform: uppercase;
@@ -696,9 +687,13 @@ img {
 }
 
 .popular-brands-title a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto 0;
   margin-right: 25px;
-  padding: 13px 70px 13px 69px;
+  width: 253px;
+  height: 38px;
   font-size: 14px;
   line-height: 1.28;
   text-transform: uppercase;
@@ -706,6 +701,8 @@ img {
   background-color: #ee3643;
   border-radius: 3px;
 }
+
+/* Стили элемента services */
 
 .services-title {
   font-size: 30px;
@@ -721,36 +718,83 @@ img {
   color: #000000;
 }
 
-.services-item {
-  padding: 20px 140px 20px 23px;
+.services-slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  margin-top: 70px;
+}
+
+.services-radio label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-left: 22px;
+  width: 240px;
+  height: 60px;
   font-family: "Cuprum-Bold", Arial, sans-serif;
   font-size: 21px;
   line-height: 1.42;
   background-color: #32425c;
-  box-shadow: 0 -1px 0 0 #293449; /* Поставил кривую тень чтобы не абыть */
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
 }
 
-.slider-content h3 {
+.services-radio {
+  position: relative;
+}
+
+.services-radio::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 279px;
+  bottom: 35px;
+  right: 0;
+  background: url("../img/shadow-line.png") no-repeat;
+}
+
+.services-list {
+  position: relative;
+  margin-left: 80px;
+}
+
+.delivery-item {
+  width: 275px;
+}
+
+.warranty-item {
+  width: 379px;
+}
+
+.credit-item {
+  width: 279px;
+}
+
+.services-slider-title {
+  margin: 0;
   font-size: 36px;
   line-height: 1;
   text-transform: uppercase;
   color: #32425c;
 }
 
-.slider-content p {
+.services-slider-text {
   font-family: "PT-Sans-Regular", Arial, sans-serif;
   font-size: 13px;
   line-height: 1.84;
   color: #000000;
 }
 
-.slider-content a {
+.services-slider-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 31px;
   width: 195px;
   height: 38px;
-  margin: 30px 0 0 80px;
   font-size: 14px;
   line-height: 1.28;
   text-transform: uppercase;
@@ -759,62 +803,38 @@ img {
   border-radius: 3px;
 }
 
-.bookmarks::before {
-  content: "";
-  width: 14px;
-  height: 16px;
-  position: absolute;
-  background: url("/img/svg/bookmark-icon.svg") no-repeat;
-  left: 10px;
-  opacity: 0.3;
+.services-slider-item {
+  display: none;
+  min-height: 265px;
 }
 
-.services-slider-list {
-  position: relative;
+#services-slider-1:checked ~ .services-slider #services1,
+#services-slider-2:checked ~ .services-slider #services2,
+#services-slider-3:checked ~ .services-slider #services3 {
+  display: block;
 }
 
-.services-slider-list::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 279px;
-  bottom: 0;
-  right: 0;
-  background: url("/img/shadow-line.png") no-repeat;
+#services-slider-1:checked ~ .services-slider .delivery-slider,
+#services-slider-2:checked ~ .services-slider .warranty-slider,
+#services-slider-3:checked ~ .services-slider .credit-slider {
+  color: #32425c;
+  background-color: #ffffff;
+  border: 0;
 }
 
-.slider-content {
-  position: relative;
+#services-slider-1:checked ~ .services-slider {
+  background: url("../img/service-delivery.png") no-repeat;
+  background-position: 470px 25px;
 }
 
-.delivery-slider::after {
-  content: "";
-  position: absolute;
-  width: 468px;
-  height: 261px;
-  bottom: 0;
-  left: 210px;
-  background: url("/img/service-delivery.png");
+#services-slider-2:checked ~ .services-slider {
+  background: url("../img/service-warranty.png") no-repeat;
+  background-position: 550px 3px;
 }
 
-.warranty-slider::after {
-  content: "";
-  position: absolute;
-  width: 468px;
-  height: 261px;
-  bottom: 0;
-  left: 210px;
-  background: url("/img/service-warranty.png");
-}
-
-.credit-slider::after {
-  content: "";
-  position: absolute;
-  width: 468px;
-  height: 261px;
-  bottom: 0;
-  left: 210px;
-  background: url("/img/service-credit.png");
+#services-slider-3:checked ~ .services-slider {
+  background: url("../img/service-credit.png") no-repeat;
+  background-position: 475px 3px;
 }
 
 /*---- стили catalog ----*/
@@ -893,7 +913,7 @@ img {
   left: -35px;
   width: 23px;
   height: 23px;
-  background-image:url("/img/svg/checkbox-off.svg");
+  background-image: url("../img/svg/checkbox-off.svg");
   opacity: 0.3;
 }
 
@@ -904,7 +924,7 @@ img {
   left: -35px;
   width: 27px;
   height: 23px;
-  background-image:url("/img/svg/checkbox-on.svg");
+  background-image: url("../img/svg/checkbox-on.svg");
   opacity: 0.3;
 }
 
@@ -915,7 +935,7 @@ img {
   left: -35px;
   width: 25px;
   height: 25px;
-  background-image:url("/img/svg/radio-off.svg");
+  background-image: url("../img/svg/radio-off.svg");
   opacity: 0.3;
 }
 
@@ -926,7 +946,7 @@ img {
   left: -35px;
   width: 25px;
   height: 25px;
-  background-image:url("/img/svg/radio-on.svg");
+  background-image: url("../img/svg/radio-on.svg");
   opacity: 0.3;
 }
 
@@ -1065,22 +1085,19 @@ img {
   z-index: 20;
 }
 .catalog-product .flag-new {
-  background: url("/img/new-flag.png") no-repeat 0 0;
+  background: url("../img/new-flag.png") no-repeat 0 0;
 }
 
 .catalog-product .product-action {
   position: absolute;
   top: 0;
   left: 0;
-
   width: 218px;
   height: 88px;
   padding: 40px 0;
-
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 10;
 }
-
 
 .product-action .buy,
 .product-action .bookmark {
@@ -1106,9 +1123,9 @@ img {
   content: "";
   position: absolute;
   width: 15px;
-  height: 15px; 
+  height: 15px;
   left: 10px;
-  background: url("/img/svg/cart-icon.svg");
+  background: url("../img/svg/cart-icon.svg");
   opacity: 0.3;
 }
 
@@ -1142,13 +1159,13 @@ img {
   border-bottom-color: #367315;
 }
 
-.product-action .buy:focus {
+.product-action .buy:active {
   background-color: #518534;
   border: 3px solid #518534;
 }
 
 .product-action .buy:hover::before,
-.product-action .buy:focus::before {
+.product-action .buy:active::before {
   opacity: 1;
 }
 
@@ -1156,7 +1173,7 @@ img {
   border: 3px solid #32425c;
 }
 
-.product-action .bookmark:focus {
+.product-action .bookmark:active {
   opacity: 0.3;
 }
 
@@ -1197,6 +1214,10 @@ img {
   background-color: #ffffff;
 }
 
+.about-company {
+  width: 519px;
+}
+
 .about-company h2 {
   margin-bottom: 38px;
   font-size: 30px;
@@ -1229,7 +1250,6 @@ img {
   background-color: #ee3643;
 }
 
-
 .contacts-company h2 {
   margin-bottom: 38px;
   font-size: 30px;
@@ -1239,6 +1259,7 @@ img {
 }
 
 .contacts-company p {
+  width: 179px;
   margin-bottom: 33px;
   font-family: "PT-Sans-Regular", Arial, sans-serif;
   font-size: 13px;
@@ -1289,11 +1310,11 @@ img {
   margin-right: 173px;
 }
 
-.footer-logo:hover img{
+.footer-logo:hover img {
   background-color: #ca2c37;
 }
 
-.footer-logo:focus img{
+.footer-logo:active img {
   background-color: #ba2732;
 }
 
@@ -1302,8 +1323,8 @@ img {
   text-decoration: underline;
 }
 
-.footer-navigation a:focus,
-.footer-category a:focus {
+.footer-navigation a:active,
+.footer-category a:active {
   text-decoration: none;
   opacity: 0.5;
 }
@@ -1323,7 +1344,7 @@ img {
   text-decoration: underline;
 }
 
-.footer-about a:nth-child(2):focus {
+.footer-about a:nth-child(2):active {
   text-decoration: none;
   color: #ee3643;
 }
@@ -1331,6 +1352,7 @@ img {
 /* ----- стили  modal ----- */
 
 .modal {
+  display: none;
   position: fixed;
   color: #000000;
   background-color: #ffffff;
@@ -1343,13 +1365,12 @@ img {
   right: 10px;
   width: 21px;
   height: 21px;
-  background: url("/img/svg/close-icon.svg") no-repeat;
+  background: url("../img/svg/close-icon.svg") no-repeat;
   text-indent: -1000px;
   overflow: hidden;
   border: none;
   cursor: pointer;
   z-index: 30;
-  outline: none;
 }
 
 /* Стили для модального окна feedback*/
@@ -1403,7 +1424,6 @@ img {
   color: #a9a9a9;
   border: 2px solid #dee3e4;
   border-radius: 3px;
-  outline: none;
 }
 
 .feedback-text {
@@ -1423,7 +1443,6 @@ img {
   border: 2px solid #dee3e4;
   border-radius: 3px;
   resize: none;
-  outline: none;
 }
 
 .feedback-user-info input::placeholder,
@@ -1439,12 +1458,12 @@ img {
   border-color: #b5b5b5;
 }
 
-.feedback-user-info input:focus,
-.feedback-text textarea:focus {
+.feedback-user-info input:active,
+.feedback-text textarea:active {
   border-color: #ee3643;
 }
 
-.feedback-button { 
+.feedback-button {
   width: 460px;
   height: 38px;
   font-size: 14px;
@@ -1452,7 +1471,6 @@ img {
   text-transform: uppercase;
   border: 0;
   border-radius: 3px;
-  outline: none;
   cursor: pointer;
 }
 
@@ -1518,7 +1536,7 @@ img {
   left: 81px;
   width: 66px;
   height: 66px;
-  background-image: url("/img/svg/modal-purchase.svg");
+  background-image: url("../img/svg/modal-purchase.svg");
 }
 
 .purchase-button-wrapper {
@@ -1541,7 +1559,6 @@ img {
   text-transform: uppercase;
   border: 0;
   border-radius: 3px;
-  outline: none;
   cursor: pointer;
 }
 
@@ -1549,16 +1566,13 @@ img {
   margin-right: 20px;
 }
 
-/* В стайлгеайде не нашел примеров взаимодействия с такой кнопкой. Нужно ли самому додумывать ? */
 .purchase-button-wrapper .white-button:hover {
   border: 1px solid #bdc6ca;
 }
 
-.purchase-button-wrapper .white-button:focus {
+.purchase-button-wrapper .white-button:active {
   border: 1px solid #ee3643;
 }
-
-
 
 /* ----- Сеточные стили ----- */
 
@@ -1571,7 +1585,6 @@ body {
   width: 940px;
   margin: 0 auto;
 }
-
 
 /* ----- Сеточные стили header ----- */
 
@@ -1694,80 +1707,9 @@ body {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.category-item a:focus {
+.category-item a:active {
   background: rgba(0, 0, 0, 0.3);
 }
-
-/*
-.category-slider h3 {
-  margin: 27px 0 0 25px;
-  font-family: "Cuprum-Bold", Arial, sans-serif;
-  font-size: 36px;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.category-slider p {
-  margin: 8px 0 0 25px;
-  font-size: 18px;
-  line-height: 1.33;
-}
-
-.slider-control {
-  margin: 32px 0 80px 25px;
-}
-
-
-.category-slider-buttom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 195px;
-  height: 38px;
-  margin: 0;
-  margin-left: 25px;
-  font-size: 14px;
-  line-height: 1.28;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #ee3643;
-  border-radius: 3px;
-}
-
-.category-slider .slider-control-previous {
-  position: absolute;
-  top: 114px;
-  left: 25px;
-  width: 60px;
-  height: 59px;
-  text-indent: -1000px;
-  overflow: hidden;
-  z-index: 20;
-  cursor: pointer;
-}
-
-.slider-control-previous {
-  background: url("/img/svg/icon-left.svg") no-repeat 0px 0px;
-}
-
-.category-slider .slider-control-next {
-  position: absolute;
-  top: 114px;
-  left: 580px;
-  width: 60px;
-  height: 59px;
-  text-indent: -1000px;
-  overflow: hidden;
-  z-index: 20;
-  cursor: pointer;
-}
-
-.slider-control-next {
-  background: url("/img/svg/icon-right.svg") no-repeat 0px 0px;
-}
-
-*/
-
 
 .material .flag-new {
   position: absolute;
@@ -1781,10 +1723,8 @@ body {
 }
 
 .material .flag-new {
-  background: url("/img/new-flag.png") no-repeat 0 0;
+  background: url("../img/new-flag.png") no-repeat 0 0;
 }
-
-/* ----- Сеточные стили main ----- */
 
 /*----- main index -----*/
 
@@ -1792,6 +1732,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 60px;
+  margin-bottom: 53px;
 }
 
 .category-left-part {
@@ -1810,7 +1751,7 @@ body {
 }
 
 .popular-goods-title {
-  margin: 20px 0;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1881,10 +1822,9 @@ body {
   box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 }
 
-.popular-brands-item:active img{
+.popular-brands-item:active img {
   opacity: 0.3;
-} 
-
+}
 
 .services-wrapper {
   display: flex;
@@ -1896,10 +1836,7 @@ body {
 .services {
   display: flex;
   flex-direction: column;
-}
-
-.services-slider {
-  display: flex;
+  height: 522px;
 }
 
 .services-title {
@@ -1912,23 +1849,11 @@ body {
   margin-top: 38px;
 }
 
-.services-slider-list {
-  margin: 74px 0 99px 0;
-}
-
-.slider-content h3 {
-  margin: 74px 0 0 80px;
-}
-
-.slider-content p {
-  margin: 34px 0 0 80px;
-}
+/* Стили блока about company */
 
 .info-company {
   display: flex;
   justify-content: space-between;
-  /*--padding-top: 82px;
-  padding-bottom: 86px;--*/
 }
 
 .about-company {
@@ -1953,6 +1878,10 @@ body {
 .about-company p:nth-child(2),
 .contacts-company p {
   margin: 38px 0 0 0;
+}
+
+.info-delivery {
+  width: 386px;
 }
 
 .info-delivery p {
@@ -2017,7 +1946,7 @@ body {
   right: -25px;
   width: 8px;
   height: 12px;
-  background-image: url(/img/svg/icon-right-small.svg);
+  background-image: url("../img/svg/icon-right-small.svg");
 }
 
 .breadcrumb .current::after {
@@ -2089,8 +2018,6 @@ body {
 .range-controls .toggle-max {
   left: 160px;
 }
-
-/* Нужно разобраться */
 
 .price-controls {
   font-size: 0;
@@ -2239,7 +2166,7 @@ body {
   border: 1px solid #bdc6ca;
 }
 
-.pagination-list a:focus {
+.pagination-list a:active {
   border: 1px solid #ee3643;
 }
 
@@ -2352,7 +2279,7 @@ body {
 }
 
 .social-button:hover,
-.social-button:focus {
+.social-button:active {
   background-color: #ee3643;
 }
 
