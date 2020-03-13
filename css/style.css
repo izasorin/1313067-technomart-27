@@ -127,10 +127,8 @@ img {
 }
 
 .page-header {
-  background-color: #f4f7f9;
-}
-
-.page-header {
+  display: flex;
+  flex-direction: column;
   background-color: #f4f7f9;
 }
 
@@ -289,8 +287,6 @@ img {
   fill: #ee3643;
 }
 
-/* Разобраться */
-
 .user-navigation p:first-of-type {
   font-family: "Cuprum-Italic", Arial, sans-serif;
   font-size: 16px;
@@ -333,7 +329,7 @@ img {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 121px;
+  min-width: 121px;
   height: 45px;
   margin-right: 5px;
   background-color: #ffffff;
@@ -352,7 +348,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  min-width: 150px;
   height: 45px;
   margin-left: 5px;
   background-color: #ffffff;
@@ -1588,11 +1584,6 @@ body {
 
 /* ----- Сеточные стили header ----- */
 
-.page-header {
-  display: flex;
-  flex-direction: column;
-}
-
 .head-navigation-wrapper {
   width: 100%;
   background-color: #293449;
@@ -1693,7 +1684,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 135px;
-  height: 38px;
+  min-height: 38px;
   margin: 12px 0 0 23px;
   font-size: 14px;
   line-height: 1.28;
@@ -1845,6 +1836,7 @@ body {
 }
 
 .services-text {
+  width: 398px;
   margin: 0;
   margin-top: 38px;
 }
