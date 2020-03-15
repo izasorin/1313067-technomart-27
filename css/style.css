@@ -181,8 +181,9 @@ img {
 .head-navigation .cart {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  padding-left: 50px;
   width: 150px;
   height: 42px;
 }
@@ -211,7 +212,7 @@ img {
   height: 16px;
   position: absolute;
   background: url("../img/svg/bookmark-icon.svg");
-  left: 10px;
+  left: 20px;
   opacity: 0.3;
 }
 
@@ -221,7 +222,7 @@ img {
   height: 16px;
   position: absolute;
   background: url("../img/svg/cart-icon.svg") no-repeat;
-  left: 10px;
+  left: 20px;
   opacity: 0.3;
 }
 
@@ -287,14 +288,21 @@ img {
   fill: #ee3643;
 }
 
-.user-navigation p:first-of-type {
+.head-description {
+  width: 196px;
+  padding: 0;
+  margin: 49px 0 0 52px;
   font-family: "Cuprum-Italic", Arial, sans-serif;
+  font-style: italic;
   font-size: 16px;
   line-height: 1.43;
   color: #ee3643;
 }
 
-.header-contacts p:first-of-type {
+.head-address {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.7;
@@ -373,10 +381,12 @@ img {
 .user-menu .user-name {
   position: relative;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 5px;
-  width: 233px;
+  box-sizing: border-box;
+  padding-left: 47px;
+  width: 267px;
   height: 45px;
   font-size: 21px;
   line-height: 1;
@@ -386,11 +396,12 @@ img {
 
 .user-menu .logout {
   position: relative;
-  min-width: 67px;
+  min-width: 32px;
   height: 45px;
   font-size: 0;
   border: 0;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
 .logout svg {
@@ -647,6 +658,7 @@ img {
   padding: 0;
   font-size: 30px;
   line-height: 1;
+  font-weight: normal;
   text-transform: uppercase;
   color: #32425c;
 }
@@ -678,6 +690,7 @@ img {
   padding: 0;
   font-size: 30px;
   line-height: 1;
+  font-weight: normal;
   text-transform: uppercase;
   color: #32425c;
 }
@@ -701,11 +714,15 @@ img {
 /* Стили элемента services */
 
 .services-title {
+  margin: 0;
+  margin-top: 68px;
   font-size: 30px;
   line-height: 1;
+  font-weight: normal;
   text-transform: uppercase;
   color: #000000;
 }
+
 
 .services .text {
   font-family: "PT-Sans-Regular", Arial, sans-serif;
@@ -773,6 +790,7 @@ img {
   margin: 0;
   font-size: 36px;
   line-height: 1;
+  font-weight: normal;
   text-transform: uppercase;
   color: #32425c;
 }
@@ -845,10 +863,15 @@ img {
 }
 
 .catalog-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 89px;
   margin: 0;
-  padding: 32px 742px 34px 30px;
+  padding-left: 32px;
   font-size: 30px;
   line-height: 1;
+  font-weight: normal;
   text-transform: uppercase;
   color: #32425c;
   background-color: #f2f6f8;
@@ -1021,6 +1044,7 @@ img {
   position: relative;
   display: inline-block;
   width: 218px;
+  min-height: 316px;
   margin-bottom: 20px;
   margin-right: 20px;
   text-align: center;
@@ -1048,10 +1072,14 @@ img {
 
 .catalog-product .product-price {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80px;
+  min-height: 38px;
   margin: 10px auto;
   margin-bottom: 20px;
-  padding: 12px 36px 11px 36px;
+  padding: 0 36px;
   font-size: 17px;
   line-height: 1.05;
   color: #ffffff;
@@ -1066,7 +1094,7 @@ img {
   right: -20px;
   width: 0;
   height: 0;
-  border: 20px solid #ffffff;
+  border: 19px solid #ffffff;
   border-left-color: #ee3643;
 }
 
@@ -1187,9 +1215,9 @@ img {
 .about-content h2 {
   padding: 0;
   margin: 0;
-
   padding-bottom: 40px;
   font-size: 30px;
+  font-weight: normal;
   line-height: 1;
   text-transform: uppercase;
   color: #000000;
@@ -1207,6 +1235,12 @@ img {
 /*info*/
 
 .info-company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #ffffff;
 }
 
@@ -1218,6 +1252,7 @@ img {
   margin-bottom: 38px;
   font-size: 30px;
   line-height: 1;
+  font-weight: normal;
   text-transform: uppercase;
   color: #000000;
 }
@@ -1237,8 +1272,12 @@ img {
   color: #000000;
 }
 
-.about-company a {
-  padding: 14px 41px 12px 40px;
+.info-company a { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 38px;
+  min-width: 220px;
   font-size: 14px;
   line-height: 1.28;
   text-transform: uppercase;
@@ -1246,10 +1285,15 @@ img {
   background-color: #ee3643;
 }
 
+.contacts-company a {
+  min-width: 300px;
+}
+
 .contacts-company h2 {
   margin-bottom: 38px;
   font-size: 30px;
   line-height: 1;
+  font-weight: normal;
   text-transform: uppercase;
   color: #000000;
 }
@@ -1267,22 +1311,13 @@ img {
   margin-bottom: 36px;
 }
 
-.contacts-company a {
-  padding: 14px 63px 12px 60px;
-
-  font-size: 14px;
-  line-height: 1.28;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #ee3643;
-}
-
 .footer-info {
   min-height: 193px;
   font-size: 18px;
   line-height: 1.33;
   background-color: #32425c;
 }
+
 
 .footer-info a {
   color: #ffffff;
@@ -1603,24 +1638,12 @@ body {
   margin-bottom: 44px;
 }
 
-.head-description {
-  width: 196px;
-  padding: 0;
-  margin: 50px 0 0 52px;
-}
-
 .header-contacts {
   min-width: 270px;
   text-align: center;
   padding: 0;
   margin: 0;
   margin-top: 46px;
-}
-
-.head-address {
-  margin: 0;
-  margin-top: 5px;
-  padding: 0;
 }
 
 .log-in {
@@ -1640,27 +1663,37 @@ body {
 
 .main-navigation {
   width: 940px;
-  height: 60px;
+  min-height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 60px;
   padding: 0;
 }
 
 .main-navigation a {
-  display: block;
-  padding: 22px 31px 26px 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
 }
 
 .main-navigation li:first-of-type a {
-  padding-left: 50px;
+  padding-left: 25px;
 }
 
 .main-navigation li:last-of-type a {
-  padding-right: 50px;
+  padding-right: 25px;
 }
+
 
 .category-item {
   display: flex;
@@ -1677,12 +1710,19 @@ body {
   font-family: "Cuprum-Bold", Arial, sans-serif;
   font-size: 24px;
   line-height: 1.25;
+  font-weight: normal;
 }
 
 .category-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 135px;
   min-height: 38px;
   margin: 12px 0 0 23px;
@@ -1760,8 +1800,13 @@ body {
 }
 
 .popular-brands {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 65px;
 }
 
@@ -1782,7 +1827,18 @@ body {
 }
 
 .popular-brands-item {
-  width: 218px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 220px;
   height: 145px;
   margin-bottom: 20px;
   margin-right: 20px;
@@ -1797,13 +1853,6 @@ body {
   margin-right: 0;
 }
 
-.popular-brands-item {
-  display: flex;
-}
-
-.popular-brands-item a {
-  margin: auto;
-}
 
 .popular-brands-item:hover {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
@@ -1818,6 +1867,8 @@ body {
 }
 
 .services-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: auto;
   width: 100%;
@@ -1825,14 +1876,14 @@ body {
 }
 
 .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 522px;
-}
-
-.services-title {
-  margin: 0;
-  margin-top: 68px;
 }
 
 .services-text {
@@ -1842,11 +1893,6 @@ body {
 }
 
 /* Стили блока about company */
-
-.info-company {
-  display: flex;
-  justify-content: space-between;
-}
 
 .about-company {
   display: flex;
@@ -2136,8 +2182,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   margin-right: 10px;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
@@ -2150,7 +2196,7 @@ body {
 
 .pagination-list li:last-child a {
   width: 138px;
-  height: 34px;
+  height: 36px;
   margin-right: 0;
 }
 
