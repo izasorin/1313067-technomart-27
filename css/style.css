@@ -920,6 +920,7 @@ img {
   font-family: "PT-Sans-Regular", Arial, sans-serif;
   font-size: 13px;
   line-height: 1.38;
+  font-weight: normal;
   color: #000000;
   background-color: #f7f3ec;
   border-radius: 4px;
@@ -1015,9 +1016,11 @@ img {
 .sorting h2 {
   margin: 0;
   padding-left: 20px;
+  padding-right: 138px;
   font-family: "PT-Sans-Regular", Arial, sans-serif;
   font-size: 13px;
   line-height: 1.38;
+  font-weight: normal;
   text-transform: uppercase;
   color: #000000;
 }
@@ -1298,8 +1301,9 @@ img {
 .info-company a { 
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 38px;
+  box-sizing: border-box;
+  padding-top: 11px;
+  height: 38px;
   min-width: 220px;
   font-size: 14px;
   line-height: 1.28;
@@ -2095,6 +2099,7 @@ body {
 
 .catalog-list {
   display: flex;
+  width: 100%;
   flex-direction: column;
   margin-bottom: 60px;
 }
@@ -2106,8 +2111,8 @@ body {
 
 .sorting {
   display: flex;
-  justify-content: start;
   align-items: center;
+  box-sizing: border-box;
   width: 700px;
   height: 38px;
   margin-top: 20px;
@@ -2115,6 +2120,50 @@ body {
   background-color: #f7f3ec;
   border-radius: 4px;
 }
+
+.sorting-items {
+  display: flex;
+}
+
+.sorting-by-price {
+  margin-right: 70px;
+}
+
+.sorting-by-type {
+  margin-right: 65px;
+}
+
+.sorting-by-functional {
+  margin-right: 46px;
+}
+
+.sorting-up {
+  margin-right: 20px;
+}
+
+
+/*
+.sorting-by-price {
+  margin-left: 138px;
+  margin-right: 70px;
+}
+
+.sorting-by-type {
+  margin-right: 65px;
+}
+
+.sorting-by-functional {
+  margin-right: 46px;
+}
+
+.sorting-up {
+  margin-right: 20px;
+}
+
+.sorting-down {
+  margin-right: 20px;
+}
+
 
 .sorting-by-price {
   margin-left: 140px;
@@ -2135,6 +2184,7 @@ body {
 .sorting-down {
   margin-left: 20px;
 }
+*/
 
 .product-listing {
   display: flex;
