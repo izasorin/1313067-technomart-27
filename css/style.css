@@ -139,21 +139,23 @@ img {
   background-color: #293449;
 }
 
-.head-navigation a {
-  display: block;
-}
 
-.head-navigation img {
-  padding: 14px 56px 13px 55px;
+.head-logo {
+  display: block;
+  text-align: center;
+  width: 220px;
+  min-height: 42px;
+  box-sizing: border-box;
+  padding-top: 12px;
   background-color: #ee3643;
   box-shadow: 0px 5px 0px 0px #9c2d36;
 }
 
-.head-logo:hover img {
+.head-logo:hover {
   background-color: #ca2c37;
 }
 
-.head-logo:active img {
+.head-logo:active {
   background-color: #ba2732;
 }
 
@@ -277,6 +279,15 @@ img {
 
 .header-search:hover svg {
   opacity: 1;
+}
+
+.header-search input:active {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.header-search input:active + .search-icon path {
+  fill: #ee3643;
 }
 
 .header-search input:focus {
@@ -713,6 +724,19 @@ img {
 
 /* Стили элемента services */
 
+.services-wrapper {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  height: 522px;
+  background-color: #f4f7f9;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+}
+
 .services-title {
   margin: 0;
   margin-top: 68px;
@@ -723,8 +747,11 @@ img {
   color: #000000;
 }
 
-
 .services .text {
+  width: 398px;
+  margin: 0;
+  margin-top: 32px;
+  padding: 0;
   font-family: "PT-Sans-Regular", Arial, sans-serif;
   font-size: 13px;
   line-height: 1.84;
@@ -819,7 +846,7 @@ img {
 
 .services-slider-item {
   display: none;
-  min-height: 265px;
+  min-height: 255px;
 }
 
 #services-slider-1:checked ~ .services-slider #services1,
@@ -1235,12 +1262,8 @@ img {
 /*info*/
 
 .info-company {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   background-color: #ffffff;
 }
 
@@ -1661,29 +1684,24 @@ body {
   margin-top: 20px;
 }
 
+
 .main-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
   width: 940px;
   min-height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 60px;
   padding: 0;
 }
 
 .main-navigation a {
   display: flex;
   justify-content: center;
-  align-items: center;
+  box-sizing: border-box;
   min-height: 60px;
+  padding: 21px 0;
 }
 
 .main-navigation li:first-of-type a {
@@ -1714,18 +1732,13 @@ body {
 }
 
 .category-item a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   width: 135px;
-  min-height: 38px;
+  height: 38px;
   margin: 12px 0 0 23px;
+  padding: 12px 0;
   font-size: 14px;
   line-height: 1.28;
   text-transform: uppercase;
@@ -1800,13 +1813,8 @@ body {
 }
 
 .popular-brands {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 65px;
 }
 
@@ -1827,17 +1835,10 @@ body {
 }
 
 .popular-brands-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   width: 220px;
   height: 145px;
   margin-bottom: 20px;
@@ -1866,31 +1867,6 @@ body {
   opacity: 0.3;
 }
 
-.services-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
-  width: 100%;
-  background-color: #f4f7f9;
-}
-
-.services {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 522px;
-}
-
-.services-text {
-  width: 398px;
-  margin: 0;
-  margin-top: 38px;
-}
 
 /* Стили блока about company */
 
