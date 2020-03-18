@@ -441,11 +441,11 @@
       <form action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="feedback-form">
           <div class="feedback-user-info">
-            <div>
+            <div class="feedback-name">
               <label for="user-name">Ваше имя:</label>
               <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
             </div>
-            <div>
+            <div class="feedback-email">
               <label for="user-email">Ваш e-mail:</label>
               <input id="user-email" type="email" name="email" placeholder="email@example.com">
             </div>
@@ -483,7 +483,6 @@
       <button class="modal-close" type="button">Закрыть</button>
     </section>
 
-    <!--script feedback-->
     <script>
       // MODAL FEEDBACK
       var link = document.querySelector(".lost-button");
@@ -552,29 +551,29 @@
         }
       });
     
-    // MODAL MAP
-    var mapLink = document.querySelector(".map");
-    var mapModal= document.querySelector(".modal-map");
-    var mapClose = mapModal.querySelector(".modal-close");
+      // MODAL MAP
+      var mapLink = document.querySelector(".map");
+      var mapModal= document.querySelector(".modal-map");
+      var mapClose = mapModal.querySelector(".modal-close");
     
-    mapLink.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      mapModal.classList.add("modal-show");
-    });
+      mapLink.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        mapModal.classList.add("modal-show");
+      });
     
-    mapClose.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      mapModal.classList.remove("modal-show");
-    });
+      mapClose.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        mapModal.classList.remove("modal-show");
+      });
 
-    window.addEventListener("keydown", function (evt) {
-      if (evt.keyCode === 27) {
-        if (mapModal.classList.contains("modal-show")) {
-          evt.preventDefault();
-          mapModal.classList.remove("modal-show");
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          if (mapModal.classList.contains("modal-show")) {
+            evt.preventDefault();
+            mapModal.classList.remove("modal-show");
+          }
         }
-      }
-    });
+      });
 
       // MODAL PURCHASE
       var purchaseLink = document.querySelectorAll(".buy");
@@ -607,7 +606,6 @@
           }
         }
       });
-
     </script>
 
   </body>
