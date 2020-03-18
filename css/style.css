@@ -139,7 +139,6 @@ img {
   background-color: #293449;
 }
 
-
 .head-logo {
   display: block;
   text-align: center;
@@ -1298,7 +1297,7 @@ img {
   color: #000000;
 }
 
-.info-company a { 
+.info-company a {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -1310,6 +1309,7 @@ img {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #ee3643;
+  border-radius: 3px;
 }
 
 .contacts-company a {
@@ -1334,8 +1334,13 @@ img {
   color: #000000;
 }
 
-.map-mini {
-  margin-bottom: 36px;
+.map {
+  width: 300px;
+  height: 158px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
 }
 
 .footer-info {
@@ -1344,7 +1349,6 @@ img {
   line-height: 1.33;
   background-color: #32425c;
 }
-
 
 .footer-info a {
   color: #ffffff;
@@ -1688,7 +1692,6 @@ body {
   margin-top: 20px;
 }
 
-
 .main-navigation {
   display: flex;
   flex-wrap: wrap;
@@ -1715,7 +1718,6 @@ body {
 .main-navigation li:last-of-type a {
   padding-right: 25px;
 }
-
 
 .category-item {
   display: flex;
@@ -1858,7 +1860,6 @@ body {
   margin-right: 0;
 }
 
-
 .popular-brands-item:hover {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
@@ -1870,7 +1871,6 @@ body {
 .popular-brands-item:active img {
   opacity: 0.3;
 }
-
 
 /* Стили блока about company */
 
@@ -2141,7 +2141,6 @@ body {
   margin-right: 20px;
 }
 
-
 /*
 .sorting-by-price {
   margin-left: 138px;
@@ -2358,4 +2357,54 @@ body {
 
 .footer-feedback {
   margin-right: 53px;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
