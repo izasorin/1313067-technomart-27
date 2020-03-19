@@ -1127,18 +1127,16 @@ img {
   border-left-color: #ee3643;
 }
 
-.catalog-product .flag-new {
+.new-in::before {
+  content: "";
   position: absolute;
-  top: -1px;
-  right: -1px;
+  top: 0;
+  right: 0;
   width: 60px;
-  height: 60px;
-  text-indent: -1000px;
-  overflow: hidden;
+  height: 59px;
   z-index: 20;
-}
-.catalog-product .flag-new {
-  background: url("../img/new-flag.png") no-repeat 0 0;
+  background-image: url("../img/new-flag.png");
+  background-repeat: no-repeat;
 }
 
 .catalog-product .product-action {
@@ -1365,18 +1363,27 @@ img {
   color: #ffd180;
 }
 
-.footer-logo img {
-  padding: 20px 41px 20px 41px;
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 173px;
+  width: 220px;
+  height: 63px;
   background-color: #ee3643;
   box-shadow: 0px 5px 0px 0px #9c2d36;
-  margin-right: 173px;
 }
 
-.footer-logo:hover img {
+.footer-logo img {
+  width: 138px;
+  height: 23px;
+}
+
+.footer-logo:hover {
   background-color: #ca2c37;
 }
 
-.footer-logo:active img {
+.footer-logo:active {
   background-color: #ba2732;
 }
 
@@ -1700,10 +1707,11 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
   margin-bottom: 60px;
   width: 940px;
   min-height: 60px;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .main-navigation a {
@@ -1714,6 +1722,7 @@ body {
   padding: 21px 0;
 }
 
+/*
 .main-navigation li:first-of-type a {
   padding-left: 25px;
 }
@@ -1721,6 +1730,7 @@ body {
 .main-navigation li:last-of-type a {
   padding-right: 25px;
 }
+*/
 
 .category-item {
   display: flex;
@@ -1762,21 +1772,6 @@ body {
 
 .category-item a:active {
   background: rgba(0, 0, 0, 0.3);
-}
-
-.material .flag-new {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 59px;
-  text-indent: -1000px;
-  overflow: hidden;
-  z-index: 20;
-}
-
-.material .flag-new {
-  background: url("../img/new-flag.png") no-repeat 0 0;
 }
 
 /*----- main index -----*/
@@ -2275,7 +2270,7 @@ body {
 .footer-address {
   padding: 0;
   margin: 0;
-  margin-top: 32px;
+  margin-top: 37px;
   margin-bottom: 53px;
 }
 

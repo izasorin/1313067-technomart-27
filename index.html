@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <!-- Здесь хедер макета -->
     <header class="page-header ">
       <div class="head-navigation-wrapper">
         <div class="head-navigation container">
@@ -83,14 +82,12 @@
         </ul>
       </nav>
     </header>
-    <!-- Здесь будет основной контент -->
     <main>
       <div class="container">
         <section class="category">
           <h2 class="visually-hidden">Категории</h2>
           <div class="category-left-part">
-            <div class="category-item material new">
-              <div class="flag-new">New</div>
+            <div class="category-item material new-in">
               <h3>Материалы</h3>
               <a href="#">На любой вкус</a>
             </div>
@@ -185,8 +182,7 @@
                 <div class="product-discount">30500 Р.</div>
                 <div class="product-price">25500 Р.</div>
               </li>
-              <li class="catalog-product">
-                <div class="flag-new">New</div>
+              <li class="catalog-product new-in">
                 <div class="product-action">
                   <a class="buy" href="#">Купить</a>
                   <a class="bookmark" href="#">В закладки</a>
@@ -339,13 +335,12 @@
           </div>
         </div>
     </main>
-    <!-- Здесь фтуер макета -->
     <footer>
       <div class="footer-info-wrapper">
         <div class="footer-info container">
           <div class="footer-contacts">
             <h2 class="visually-hidden">Контактная информация</h2>
-            <a class="footer-logo" href="index.html">
+            <a class="footer-logo" href="#">
               <img src="img/svg/logo-footer.svg" width="138" height="23" alt="Логотип магазина Техномарт"/>
             </a>
             <p class="footer-address">
@@ -435,7 +430,6 @@
         </div>
       </div>
     </footer>
-
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
@@ -461,7 +455,6 @@
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
-
     <section class="modal modal-map">
       <h2 class="visually-hidden">Карта</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494.920375273981!2d30.31684684663201!3d59.93868553976461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1583519815695!5m2!1sru!2sru" width="940" height="446" style="border:0;" allowfullscreen=""></iframe>
@@ -470,7 +463,6 @@
         </div>
         <button class="modal-close" type="button">Закрыть</button>
     </section>
-
     <section class="modal modal-purchase">
       <h2 class="visually-hidden">Товар добавлен в корзину!</h2>
       <div class="purchase-title">
@@ -482,7 +474,7 @@
       </div>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
-
+    
     <script>
       // MODAL FEEDBACK
       var link = document.querySelector(".lost-button");
