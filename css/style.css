@@ -1844,15 +1844,20 @@ body {
 }
 
 .popular-brands-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-sizing: border-box;
   width: 220px;
   height: 145px;
   margin-bottom: 20px;
   margin-right: 20px;
   border: 1px solid #eaeaea;
+}
+
+.popular-brands-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 145px;
 }
 
 .popular-brands-item:nth-child(4n) {
