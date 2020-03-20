@@ -207,6 +207,11 @@ img {
   background-color: #ee3643;
 }
 
+.head-navigation-active {
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
 .bookmarks::before {
   content: "";
   width: 14px;
