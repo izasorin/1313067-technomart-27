@@ -1,11 +1,11 @@
 // MODAL FEEDBACK
 var link = document.querySelector(".lost-button");
 var popup = document.querySelector(".modal-feedback");
-var close = popup.querySelector(".modal-close");
-var form = popup.querySelector(".modal-feedback form");
-var feedbackName = popup.querySelector("[name=name]");
-var feedbackEmail = popup.querySelector("[name=email]");
-var feedbackMessage = popup.querySelector("[name=feedback]");
+var close = document.querySelector(".modal-close");
+var form = document.querySelector(".modal-feedback form");
+var feedbackName = document.querySelector("[name=name]");
+var feedbackEmail = document.querySelector("[name=email]");
+var feedbackMessage = document.querySelector("[name=feedback]");
 var isStorageSupport = true;
 var storageName = "";
 var storageEmail = "";

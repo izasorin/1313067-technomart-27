@@ -184,6 +184,7 @@ img {
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  margin: 0;
   padding-left: 50px;
   width: 150px;
   height: 42px;
@@ -306,7 +307,7 @@ img {
 .head-description {
   width: 196px;
   padding: 0;
-  margin: 49px 0 0 52px;
+  margin: 49px 71px 0 52px;
   font-family: "Cuprum-Italic", Arial, sans-serif;
   font-style: italic;
   font-size: 16px;
@@ -401,7 +402,7 @@ img {
   margin-bottom: 5px;
   box-sizing: border-box;
   padding-left: 47px;
-  width: 267px;
+  width: 259px;
   height: 45px;
   font-size: 21px;
   line-height: 1;
@@ -409,31 +410,28 @@ img {
   background-color: #ffffff;
 }
 
-.user-menu .logout {
+.logout {
   position: relative;
-  min-width: 32px;
+  width: 40px;
   height: 45px;
-  font-size: 0;
-  border: 0;
-  cursor: pointer;
   background-color: #ffffff;
 }
 
 .logout svg {
   position: absolute;
-  top: 14px;
-  right: 10px;
-  opacity: 0.3;
+  padding: 14px 10px 14px 10px;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
-.logout svg:hover {
-  opacity: 1;
+.logout:hover path {
+  fill: #32425C;
 }
 
-.logout svg:active {
-  opacity: 0.3;
+.logout:active path {
+  fill: #c5c5c5;
 }
+
 
 .user-name::before {
   content: "";
@@ -514,6 +512,9 @@ img {
   background-color: #161d29;
 }
 
+.main-navigation-current a {
+  background-color: #293449;
+}
 /*---- стили index ----*/
 
 .material {
@@ -571,6 +572,7 @@ img {
 
 .slider-radio label {
   display: inline-block;
+  vertical-align: top;
   width: 10px;
   height: 10px;
   margin-right: 12px;
@@ -896,10 +898,10 @@ img {
 .catalog-title {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   min-height: 89px;
+  box-sizing: border-box;
   margin: 0;
-  padding-left: 32px;
+  padding: 32px 0 32px 30px;
   font-size: 30px;
   line-height: 1;
   font-weight: normal;
@@ -1001,6 +1003,17 @@ img {
   opacity: 0.3;
 }
 
+.brand-filter input:hover + label::before,
+.accumulator-filter input:hover + label::before {
+  opacity: 0.5;
+}
+
+.brand-filter input:disabled ~ label,
+.accumulator-filter input:disabled ~ label {
+  opacity: 0.3;
+}
+
+
 .filter button {
   display: flex;
   justify-content: center;
@@ -1019,8 +1032,6 @@ img {
 
 .sorting h2 {
   margin: 0;
-  padding-left: 20px;
-  padding-right: 138px;
   font-family: "PT-Sans-Regular", Arial, sans-serif;
   font-size: 13px;
   line-height: 1.38;
@@ -1077,6 +1088,7 @@ img {
 .catalog-product {
   position: relative;
   display: inline-block;
+  vertical-align: top;
   width: 218px;
   min-height: 316px;
   margin-bottom: 20px;
@@ -1272,10 +1284,6 @@ img {
   background-color: #ffffff;
 }
 
-.about-company {
-  width: 519px;
-}
-
 .about-company h2 {
   margin-bottom: 38px;
   font-size: 30px;
@@ -1286,6 +1294,7 @@ img {
 }
 
 .about-company p {
+  width: 519px;
   font-family: "PT-Sans-Regular", Arial, sans-serif;
   font-size: 13px;
   line-height: 1.84;
@@ -1675,12 +1684,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
 }
 
 .user-navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  box-sizing: border-box;
   margin-bottom: 44px;
 }
 
@@ -1697,6 +1708,7 @@ body {
   width: 300px;
   flex-wrap: wrap;
   margin-top: 42px;
+  margin-left: 51px;
 }
 
 .log-out {
@@ -1705,6 +1717,7 @@ body {
   padding: 0;
   margin: 0;
   margin-top: 20px;
+  margin-left: 69px;
 }
 
 .main-navigation {
@@ -1727,15 +1740,6 @@ body {
   padding: 21px 0;
 }
 
-/*
-.main-navigation li:first-of-type a {
-  padding-left: 25px;
-}
-
-.main-navigation li:last-of-type a {
-  padding-right: 25px;
-}
-*/
 
 .category-item {
   display: flex;
@@ -1906,11 +1910,8 @@ body {
   margin: 38px 0 0 0;
 }
 
-.info-delivery {
-  width: 386px;
-}
-
 .info-delivery p {
+  width: 386px;
   margin: 32px 0 0 0;
 }
 
@@ -2052,6 +2053,7 @@ body {
 
 .price-controls label {
   display: inline-block;
+  vertical-align: top;
   width: 50%;
   font-size: 17px;
 }
@@ -2112,72 +2114,32 @@ body {
   margin-bottom: 60px;
 }
 
-.sorting ul {
-  margin: 0;
-  padding: 0;
-}
 
 .sorting {
   display: flex;
   align-items: center;
-  box-sizing: border-box;
   width: 700px;
   height: 38px;
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: #f7f3ec;
   border-radius: 4px;
+  
+}
+
+.sorting h2 {
+  margin-left: 19px;
 }
 
 .sorting-items {
   display: flex;
-}
-
-.sorting-by-price {
-  margin-right: 70px;
-}
-
-.sorting-by-type {
-  margin-right: 65px;
-}
-
-.sorting-by-functional {
-  margin-right: 46px;
-}
-
-.sorting-up {
-  margin-right: 20px;
-}
-
-/*
-.sorting-by-price {
-  margin-left: 138px;
-  margin-right: 70px;
+  margin: 0;
+  margin-left: 139px;
+  padding: 0;
 }
 
 .sorting-by-type {
-  margin-right: 65px;
-}
-
-.sorting-by-functional {
-  margin-right: 46px;
-}
-
-.sorting-up {
-  margin-right: 20px;
-}
-
-.sorting-down {
-  margin-right: 20px;
-}
-
-
-.sorting-by-price {
-  margin-left: 140px;
-}
-
-.sorting-by-type {
-  margin-left: 70px;
+  margin-left: 71px;
 }
 
 .sorting-by-functional {
@@ -2185,13 +2147,12 @@ body {
 }
 
 .sorting-up {
-  margin-left: 45px;
+  margin-left: 46px;
 }
 
 .sorting-down {
-  margin-left: 20px;
+  margin-left: 21px;
 }
-*/
 
 .product-listing {
   display: flex;
@@ -2249,6 +2210,7 @@ body {
 }
 
 .about-content {
+  width: 911px;
   padding-top: 67px;
   padding-bottom: 73px;
 }
