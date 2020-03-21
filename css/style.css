@@ -319,7 +319,7 @@ img {
   margin: 0;
   margin-top: 5px;
   padding: 0;
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum-Regular", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.7;
   color: #32425c;
@@ -1493,7 +1493,7 @@ img {
 .feedback-form label {
   display: block;
   margin-bottom: 13px;
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum-Regular", Arial, sans-serif;
   font-size: 18px;
   line-height: 1;
   color: #000000;
