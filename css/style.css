@@ -218,21 +218,21 @@ img {
 }
 
 .bookmarks::before {
-  content: "";
+  content: '';
   width: 14px;
   height: 16px;
   position: absolute;
-  background: url("../img/svg/bookmark-icon.svg");
+  background: url('../img/svg/bookmark-icon.svg');
   left: 17px;
   opacity: 0.3;
 }
 
 .cart::before {
-  content: "";
+  content: '';
   width: 14px;
   height: 16px;
   position: absolute;
-  background: url("../img/svg/cart-icon.svg") no-repeat;
+  background: url('../img/svg/cart-icon.svg') no-repeat;
   left: 20px;
   opacity: 0.3;
 }
@@ -331,11 +331,13 @@ img {
   color: #32425c;
 }
 
+
 .header-contacts a:first-of-type {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
+  padding-left: 15px;
   width: 270px;
   height: 45px;
   position: relative;
@@ -345,9 +347,12 @@ img {
   border: 3px solid white;
 }
 
-.head-phone svg {
-  padding-left: 15px;
+.head-phone::before {
+  content: '';
+  width: 19px;
+  height: 19px;
   padding-right: 40px;
+  background: url('../img/svg/phone-icon.svg') no-repeat; 
 }
 
 .log-out a {
@@ -441,12 +446,12 @@ img {
 
 
 .user-name::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 20px;
   height: 18px;
   left: 10px;
-  background: url("../img/svg/user-icon.svg");
+  background: url('../img/svg/user-icon.svg');
   opacity: 0.3;
 }
 
@@ -485,7 +490,7 @@ img {
 }
 
 .orders::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 8px;
   right: -19px;
@@ -522,15 +527,15 @@ img {
 
 .material {
   margin-right: 20px;
-  background: #ffbf47 url("../img/category-materials.png") no-repeat 213px 30px;
+  background: #ffbf47 url('../img/category-materials.png') no-repeat 213px 30px;
 }
 
 .tools {
-  background: #3bbce3 url("../img/category-instrument.png") no-repeat 197px 33px;
+  background: #3bbce3 url('../img/category-instrument.png') no-repeat 197px 33px;
 }
 
 .instrument {
-  background-image: url("../img/slider-image-1.jpg");
+  background-image: url('../img/slider-image-1.jpg');
 }
 
 .slider {
@@ -613,12 +618,12 @@ img {
 
 #slider-2:checked ~ .slider {
   background-color: #857a6d;
-  background-image: url("../img/slider-image-1.jpg");
+  background-image: url('../img/slider-image-1.jpg');
 }
 
 #slider-1:checked ~ .slider {
   background-color: #857a6d;
-  background-image: url("../img/slider-image-2.jpg");
+  background-image: url('../img/slider-image-2.jpg');
 }
 
 .slider .previous-slider {
@@ -634,7 +639,7 @@ img {
 }
 
 .previous-slider {
-  background: url("../img/svg/icon-left.svg") no-repeat 0px 0px;
+  background: url('../img/svg/icon-left.svg') no-repeat 0px 0px;
 }
 
 .slider .next-slider {
@@ -650,21 +655,21 @@ img {
 }
 
 .next-slider {
-  background: url("../img/svg/icon-right.svg") no-repeat 0px 0px;
+  background: url('../img/svg/icon-right.svg') no-repeat 0px 0px;
 }
 
 .technics {
   margin-bottom: 20px;
-  background: #dc91d8 url("../img/category-technics.png") no-repeat 191px 30px;
+  background: #dc91d8 url('../img/category-technics.png') no-repeat 191px 30px;
 }
 
 .discount {
   margin-bottom: 20px;
-  background: #8ed78f url("../img/category-sale.png") no-repeat 196px 25px;
+  background: #8ed78f url('../img/category-sale.png') no-repeat 196px 25px;
 }
 
 .delivery {
-  background: #ffc047 url("../img/category-delivery.png") no-repeat 191px 30px;
+  background: #ffc047 url('../img/category-delivery.png') no-repeat 191px 30px;
   background-color: #ffc047;
 }
 
@@ -800,13 +805,13 @@ img {
 }
 
 .services-radio::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 10px;
   height: 279px;
   bottom: 30px;
   right: 0;
-  background: url("../img/shadow-line.png") no-repeat;
+  background: url('../img/shadow-line.png') no-repeat;
 }
 
 .services-list {
@@ -883,17 +888,17 @@ img {
 }
 
 #services-slider-1:checked ~ .services-slider {
-  background: url("../img/service-delivery.png") no-repeat;
+  background: url('../img/service-delivery.png') no-repeat;
   background-position: 470px 25px;
 }
 
 #services-slider-2:checked ~ .services-slider {
-  background: url("../img/service-warranty.png") no-repeat;
+  background: url('../img/service-warranty.png') no-repeat;
   background-position: 550px 3px;
 }
 
 #services-slider-3:checked ~ .services-slider {
-  background: url("../img/service-credit.png") no-repeat;
+  background: url('../img/service-credit.png') no-repeat;
   background-position: 475px 3px;
 }
 
@@ -976,46 +981,46 @@ img {
 }
 
 .filter-input-checkbox + label::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -3px;
   left: -35px;
   width: 23px;
   height: 23px;
-  background-image: url("../img/svg/checkbox-off.svg");
+  background-image: url('../img/svg/checkbox-off.svg');
   opacity: 0.3;
 }
 
 .filter-input-checkbox:checked + label::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -3px;
   left: -35px;
   width: 27px;
   height: 23px;
-  background-image: url("../img/svg/checkbox-on.svg");
+  background-image: url('../img/svg/checkbox-on.svg');
   opacity: 0.3;
 }
 
 .filter-input-radio + label::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -3px;
   left: -35px;
   width: 25px;
   height: 25px;
-  background-image: url("../img/svg/radio-off.svg");
+  background-image: url('../img/svg/radio-off.svg');
   opacity: 0.3;
 }
 
 .filter-input-radio:checked + label::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -3px;
   left: -35px;
   width: 25px;
   height: 25px;
-  background-image: url("../img/svg/radio-on.svg");
+  background-image: url('../img/svg/radio-on.svg');
   opacity: 0.3;
 }
 
@@ -1154,7 +1159,7 @@ img {
 }
 
 .catalog-product .product-price::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: -20px;
@@ -1165,14 +1170,14 @@ img {
 }
 
 .new-in::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
   width: 60px;
   height: 59px;
   z-index: 20;
-  background-image: url("../img/new-flag.png");
+  background-image: url('../img/new-flag.png');
   background-repeat: no-repeat;
 }
 
@@ -1209,12 +1214,12 @@ img {
 }
 
 .product-action .buy::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 15px;
   height: 15px;
   left: 10px;
-  background: url("../img/svg/cart-icon.svg");
+  background: url('../img/svg/cart-icon.svg');
   opacity: 0.3;
 }
 
@@ -1483,7 +1488,7 @@ img {
   right: 10px;
   width: 21px;
   height: 21px;
-  background: url("../img/svg/close-icon.svg") no-repeat;
+  background: url('../img/svg/close-icon.svg') no-repeat;
   text-indent: -1000px;
   overflow: hidden;
   border: none;
@@ -1632,7 +1637,7 @@ img {
   right: 0;
 }
 
-/* Стили для модального окна "Товар добавлен в корзину" */
+/* Стили для модального окна Товар добавлен в корзину */
 
 .modal-purchase {
   display: none;
@@ -1655,13 +1660,13 @@ img {
 }
 
 .purchase-title p::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 48px;
   left: 81px;
   width: 66px;
   height: 66px;
-  background-image: url("../img/svg/modal-purchase.svg");
+  background-image: url('../img/svg/modal-purchase.svg');
 }
 
 .purchase-button-wrapper {
@@ -1980,7 +1985,7 @@ body {
 }
 
 .delivery-list li::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 9px;
   left: 0px;
@@ -1993,7 +1998,6 @@ body {
 .about-company a {
   margin-bottom: 84px;
 }
-
 
 /*----- main catalog -----*/
 
@@ -2015,13 +2019,13 @@ body {
 }
 
 .breadcrumb-item::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 2px;
   right: -25px;
   width: 8px;
   height: 12px;
-  background-image: url("../img/svg/icon-right-small.svg");
+  background-image: url('../img/svg/icon-right-small.svg');
 }
 
 .breadcrumb .current::after {
@@ -2125,7 +2129,7 @@ body {
 }
 
 .max-price::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 10px;
   height: 1px;
@@ -2172,7 +2176,6 @@ body {
   margin-bottom: 20px;
   background-color: #f7f3ec;
   border-radius: 4px;
-  
 }
 
 .sorting h2 {
