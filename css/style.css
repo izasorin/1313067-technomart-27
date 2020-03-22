@@ -147,6 +147,11 @@ img {
   background-color: #ba2732;
 }
 
+.head-logo-index:hover,
+.head-logo-index:active {
+  background-color: #ee3643;
+}
+
 .head-navigation .place-order {
   display: flex;
   justify-content: center;
@@ -506,6 +511,13 @@ img {
 .main-navigation-current a {
   background-color: #293449;
 }
+
+.main-navigation-current a:hover,
+.main-navigation-current a:focus {
+  color: #ffffff;
+  background-color: #293449;
+}
+
 /*---- стили index ----*/
 
 .material {
@@ -791,7 +803,7 @@ img {
   position: absolute;
   width: 10px;
   height: 279px;
-  bottom: 35px;
+  bottom: 30px;
   right: 0;
   background: url("../img/shadow-line.png") no-repeat;
 }
@@ -1409,6 +1421,11 @@ img {
 
 .footer-logo:active {
   background-color: #ba2732;
+}
+
+.footer-logo-index:hover,
+.footer-logo-index:active {
+  background-color: #ee3643;
 }
 
 .footer-navigation a:hover,
